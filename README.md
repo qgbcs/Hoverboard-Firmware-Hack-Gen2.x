@@ -2,13 +2,13 @@
 ````
 with different defines_2-x.h for three different board layouts :-) 
 Simply choose your layout in Inc/defines.h :-))
-Compiles with Keil version 6 :-)))
 ````
 
 
 #### Update 2.1:
 ````
 That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
+Compiles with Keil version 6 :-))
 ````
 
 #### version/layout 2.2:
