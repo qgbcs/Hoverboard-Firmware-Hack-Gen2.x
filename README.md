@@ -1,7 +1,8 @@
 #### Update 2.x:
 ````
 with different defines_2-x.h for three different board layouts :-) 
-Compiles with Keil version 6 :-))
+Simply choose your layout in Inc/defines.h :-))
+Compiles with Keil version 6 :-)))
 ````
 
 
