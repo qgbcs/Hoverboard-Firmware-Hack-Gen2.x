@@ -1,15 +1,12 @@
 #### Update 2.x:
-````
-with different defines_2-x.h for three different board layouts :-) 
-Simply choose your layout in Inc/defines.h :-))
-````
+- This is a fork from https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
+- with different defines_2-x.h for three different board layouts :-) 
+- Simply choose your layout in Inc/defines.h :-))
 
 
 #### Update 2.1:
-````
-That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
-Compiles with Keil version 6 :-))
-````
+- That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
+- Compiles with Keil version 6 :-))
 
 #### version/layout 2.2:
 ![otter](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics%202.2/hoverboard_gen2_mosfet_pins_gd32F130C8.jpg)
