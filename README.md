@@ -14,6 +14,10 @@ That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 #### version/layout 2.2:
 ![otter](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics%202.2/hoverboard_gen2_mosfet_pins_gd32F130C8.jpg)
 
+The low side gate drivers each have three smd resitors connected to a PBx and the high side mosfets begin with two resistors connected to a PAx, which confirms the gate driver circuit of the original "Gen1" hoverboard schematics on page 2 of https://raw.githubusercontent.com/EFeru/hoverboard-firmware-hack-FOC/main/docs/20150722_hoverboard_sch.pdf
+
+The pins PB15, PB14 and PA8 can easily be tested with a multimeter as they have double holes connecting to the backside layer of the circuit board.
+
 ![otter](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics%202.2/hoverboard_gen2_hall_pins_gd32F130C8.jpg)
 
 #### version/layout 2.1:
