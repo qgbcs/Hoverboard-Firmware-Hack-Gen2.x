@@ -1,4 +1,11 @@
-#### Updates:
+#### Update 2.x:
+````
+with different defines_2-x.h for three different board layouts :-) 
+Compiles with Keil version 6 :-))
+````
+
+
+#### Update 2.1:
 ````
 That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 ````
