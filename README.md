@@ -22,6 +22,10 @@ The pins PB15, PB14 and PA8 can easily be tested with a multimeter as they have 
 The documentation of the GD32F130C8 seems to be wrong as the pin 23 is not internally connected to pin 47. Maybe pin 23 is an undocumented GPIO ?
 https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/GD32F130C8%20Dokumentation/GD32F130.pdf
 
+![uart pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics_2.2/hoverboard_gen2-2_uart_pins_gd32F130C8.jpg)
+
+again a wrongly documented pin (24) in the gd32F130C8 data sheet :-(
+
 #### version/layout 2.1:
 ![otter](https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1/blob/main/pins-board.jpg)
 
