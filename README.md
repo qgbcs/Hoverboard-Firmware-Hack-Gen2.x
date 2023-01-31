@@ -2,7 +2,7 @@
 - This is a fork from https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 - with different defines_2-x.h for two different board layouts :-) 
 - Simply choose ` #define LAYOUT_2_0 ` or ` #define LAYOUT_2_1 ` in ` Inc/config.h ` :-))
-- as only UART control is supported you can download compiled binaries here or there: [pionierland.de/hoverhack/gen2/ReadyToFlash](https://pionierland.de/hoverhack/gen2/ReadyToFlash/) (the test.bin  will ignore uart speed and will repeat speed from -300 to 300 instead)
+- as only UART control is supported you can download compiled binaries here or there: [pionierland.de/hoverhack/gen2/ReadyToFlash](https://pionierland.de/hoverhack/gen2/ReadyToFlash/) (the "test" firmwares will ignore uart speed and will repeat speed from -300 to 300 instead)
 - Make sure your board is one of the supported layouts ! **Wrong pin assignments can shortcut the battery and kill the mosfets !!**
 
 
