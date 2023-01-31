@@ -64,3 +64,4 @@ ST-Link-Utility is out of date and needs a few old mfc42.dll files! Please open 
 Bonus: Kristian Kosev (krisstakos) has  included **rename.bat** which will rename and move your output file, but you have to specify the right paths.
 - Hold the powerbutton while flashing the firmware, as the controller releases the power latch and switches itself off during flashing
 - If Flashing with Keil using a ST-Link dongle crashes, download a fixed dll here: https://developer.arm.com/documentation/ka005381/latest
+- ST-Link_Utility and Stm32CubeProgrammer seem to have problems to programm the GD32F130. Try ` st-flash write hoverboard.bin 0x8000000 ` with this open source utility: https://github.com/stlink-org/stlink/releases (ordinary Windows 10 64 bit: x86_64-w64-mingw32.zip )
