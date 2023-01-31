@@ -1,7 +1,7 @@
 #### Update 2.x:
 - This is a fork from https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 - with different defines_2-x.h for two different board layouts :-) 
-- Simply choose #define LAYOUT_2_0 or #define LAYOUT_2_1 in Inc/config.h :-))
+- Simply choose ` #define LAYOUT_2_0 ` or ` #define LAYOUT_2_1 ` in ` Inc/config.h ` :-))
 
 
 #### Update 2.1:
@@ -10,7 +10,7 @@
 
 #### version/layout 2.0:
 
-![otter](https://raw.githubusercontent.com/flo199213/Hoverboard-Firmware-Hack-Gen2/master/Hardware_Overview_small.png)
+![layout 2.0](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-0.jpg)
 
 ![mosfet pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_mosfet_pins_gd32F130C8.jpg)
 
@@ -26,7 +26,7 @@ The pins PB15, PB14 and PA8 can easily be tested with a multimeter as they have 
 
 
 #### version/layout 2.1:
-![otter](https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1/blob/main/pins-board.jpg)
+![layout 2.1](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-1.jpg)
 
 
 ### Hoverboard-Firmware-Hack-Gen2.x
