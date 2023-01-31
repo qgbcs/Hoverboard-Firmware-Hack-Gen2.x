@@ -1,7 +1,9 @@
-#### Update 2.x:
+### Update 2.x:
 - This is a fork from https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 - with different defines_2-x.h for two different board layouts :-) 
 - Simply choose ` #define LAYOUT_2_0 ` or ` #define LAYOUT_2_1 ` in ` Inc/config.h ` :-))
+- as only UART control is supported you can download compiled binaries here: https://github.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/tree/main/binaries%20ready%20to%20flash :-)))
+- Make sure your board is one of the supported layouts ! **Wrong pin assignments can shortcut the battery and kill the mosfets !!**
 
 
 #### Update 2.1:
