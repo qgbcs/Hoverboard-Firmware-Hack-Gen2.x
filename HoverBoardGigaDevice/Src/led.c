@@ -30,6 +30,7 @@
 
 #include "gd32f1x0.h"
 #include "../Inc/led.h"
+#include "../Inc/config.h"	// to choose the defines_2-x.h
 #include "../Inc/defines.h"
 
 // Only slave has LED mechanism

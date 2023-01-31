@@ -30,8 +30,8 @@
 
 #include "gd32f1x0.h"
 #include "../Inc/setup.h"
-#include "../Inc/defines.h"
 #include "../Inc/config.h"
+#include "../Inc/defines.h"
 
 // Internal constants
 const int16_t pwm_res = 72000000 / 2 / PWM_FREQ; // = 2000

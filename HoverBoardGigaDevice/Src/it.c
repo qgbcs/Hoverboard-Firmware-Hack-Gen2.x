@@ -30,8 +30,8 @@
 
 #include "gd32f1x0.h"
 #include "../Inc/it.h"
-#include "../Inc/defines.h"
 #include "../Inc/config.h"
+#include "../Inc/defines.h"
 #include "../Inc/bldc.h"
 #include "../Inc/led.h"
 #include "../Inc/commsMasterSlave.h"

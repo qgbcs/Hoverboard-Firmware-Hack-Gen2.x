@@ -29,6 +29,7 @@
 */
 
 #include "gd32f1x0.h"
+#include "../Inc/config.h"	// to choose the defines_2-x.h
 #include "../Inc/defines.h"
 #include "../Inc/setup.h"
 #include "../Inc/comms.h"
@@ -255,7 +256,7 @@ void CheckUSARTBluetoothInput(uint8_t USARTBuffer[])
 void SendBluetoothDevice(uint8_t identifier, int16_t value)
 {
 	int index = 0;
-	char charVal[5];
+	char charVal[6];
 	uint8_t buffer[USART_BLUETOOTH_TX_BYTES];
 	
 	// Send bluetooth frame

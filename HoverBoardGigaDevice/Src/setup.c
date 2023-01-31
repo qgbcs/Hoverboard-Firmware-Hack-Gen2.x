@@ -30,8 +30,8 @@
 
 #include "gd32f1x0.h"
 #include "../Inc/setup.h"
-#include "../Inc/defines.h"
 #include "../Inc/config.h"
+#include "../Inc/defines.h"
 #include "../Inc/it.h"
 
 #define TIMEOUT_FREQ  1000
