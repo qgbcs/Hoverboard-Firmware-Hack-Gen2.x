@@ -3,75 +3,54 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.36.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Kristian Kosev, home, LIC=----
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Robo Durden, Paperstreet Soap Company, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.36.0.0
-Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.36.0.0
-Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      UL2CM3.DLL V1.164.0.0
-Dialog DLL:      TCM.DLL V1.53.0.0
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\Hoverboard-Firmware-Hack-Gen2.1-master\HoverBoardGigaDevice\Hoverboard.uvprojx
-Project File Date:  04/07/2022
+C:\GitHub\Hoverboard-Firmware-Hack-Gen2.x\HoverBoardGigaDevice\Hoverboard.uvprojx
+Project File Date:  01/31/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
 compiling bldc.c...
-compiling commsSteering.c...
-compiling commsBluetooth.c...
-compiling led.c...
-compiling main.c...
-compiling comms.c...
-compiling it.c...
-compiling gd32f1x0_dbg.c...
 compiling setup.c...
-compiling gd32f1x0_adc.c...
+compiling main.c...
+compiling it.c...
+compiling commsBluetooth.c...
+compiling commsSteering.c...
+compiling led.c...
 compiling commsMasterSlave.c...
-compiling gd32f1x0_opa.c...
-compiling gd32f1x0_fwdgt.c...
-compiling gd32f1x0_gpio.c...
-compiling gd32f1x0_dma.c...
-compiling gd32f1x0_misc.c...
-compiling gd32f1x0_pmu.c...
-compiling gd32f1x0_i2c.c...
-compiling gd32f1x0_syscfg.c...
-compiling gd32f1x0_rcu.c...
-assembling startup_gd32f1x0.s...
-compiling gd32f1x0_usart.c...
-compiling gd32f1x0_wwdgt.c...
-compiling gd32f1x0_timer.c...
-compiling system_gd32f1x0.c...
 linking...
-Program Size: Code=21892 RO-data=1128 RW-data=104 ZI-data=2288  
-After Build - User command #1: D:\Hoverboard-Firmware-Hack-Gen2-master\rename.bat
-D:\Hoverboard-Firmware-Hack-Gen2.1-master\HoverBoardGigaDevice>ren D:\Hoverboard-Firmware-Hack-Gen2-master\HoverBoardGigaDevice\Objects\Hoverboard.axf firmware.elf 
-The system cannot find the path specified.
-D:\Hoverboard-Firmware-Hack-Gen2.1-master\HoverBoardGigaDevice>move D:\Hoverboard-Firmware-Hack-Gen2-master\HoverBoardGigaDevice\Objects\firmware.elf D:\hoverboard-sideboard-hack-GD-master\.pio\build\VARIANT_DEBUG\ 
-The system cannot find the path specified.
+Program Size: Code=20338 RO-data=1146 RW-data=12 ZI-data=2388  
+FromELF: creating hex file...
 ".\Objects\Hoverboard.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
-                ARM.CMSIS.5.8.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.5.0
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: GigaDevice
-                http://gd32mcu.com/data/documents/pack/GigaDevice.GD32F1x0_DFP.3.2.0.pack
-                GigaDevice.GD32F1x0_DFP.3.2.0
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F1x0_DFP.3.2.1.pack
+                GigaDevice.GD32F1x0_DFP.3.2.1
                 GigaDevice GD32F1x0 Series Device Support and Examples
    * Component: ADC Version: 3.2.0
    * Component: DMA Version: 3.2.0
@@ -91,79 +70,79 @@ Package Vendor: GigaDevice
    * Component: Startup Version: 3.2.0
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_Target_1
-  D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
-  D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc
-  D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Include
+  ./RTE/_Target_1
+  C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Firmware/Peripherals/inc
+  C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.5.0
+   * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:ADC:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_adc.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_adc.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_adc.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_adc.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:DMA:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_dma.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_dma.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_dma.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_dma.c
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:FWDGT:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_fwdgt.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_fwdgt.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_fwdgt.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_fwdgt.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:GPIO:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_gpio.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_gpio.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_gpio.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_gpio.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:I2C:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_i2c.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_i2c.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_i2c.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_i2c.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:MCUDBG:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_dbg.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_dbg.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_dbg.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_dbg.c
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:MISC:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_misc.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_misc.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_misc.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_misc.c
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:OPA:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_opa.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_opa.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_opa.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_opa.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:PMU:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_pmu.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_pmu.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_pmu.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_pmu.c
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:RCU:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_rcu.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_rcu.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_rcu.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_rcu.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:SYSCFG:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_syscfg.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_syscfg.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_syscfg.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_syscfg.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:TIMER:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_timer.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_timer.c
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_timer.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_timer.h
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:USART:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_usart.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_usart.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_usart.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_usart.c
 
    * Component: GigaDevice::Device:GD32F1x0_StdPeripherals:WWDGT:3.2.0
-      Include file:  Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h
-      Source file:   Device\Firmware\Peripherals\src\gd32f1x0_wwdgt.c
+      Include file:  Device/Firmware/Peripherals/inc/gd32f1x0_wwdgt.h
+      Source file:   Device/Firmware/Peripherals/src/gd32f1x0_wwdgt.c
 
    * Component: GigaDevice::Device:GD32F1x0_libopt:3.2.0
-      Include file:  Device\Include\gd32f1x0_libopt.h
+      Include file:  Device/Include/gd32f1x0_libopt.h
 
    * Component: GigaDevice::Device:Startup:3.2.0
-      Include file:  Device\Include\gd32f1x0.h
-      Source file:   Device\Source\system_gd32f1x0.c
-      Source file:   Device\Source\startup_gd32f1x0.s
-Build Time Elapsed:  00:00:01
+      Include file:  Device/Include/gd32f1x0.h
+      Source file:   Device/Source/startup_gd32f1x0.s
+      Source file:   Device/Source/system_gd32f1x0.c
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

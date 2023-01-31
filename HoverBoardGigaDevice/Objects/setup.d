@@ -1,30 +1,27 @@
-.\objects\setup.o: Src\setup.c
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Include\gd32f1x0.h
-.\objects\setup.o: D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h
-.\objects\setup.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\setup.o: D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
-.\objects\setup.o: D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
-.\objects\setup.o: D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
-.\objects\setup.o: D:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Include\system_gd32f1x0.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Include\gd32f1x0_libopt.h
-.\objects\setup.o: .\RTE\_Target_1\RTE_Components.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_adc.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Include\gd32f1x0.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_dbg.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_dma.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_gpio.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_syscfg.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_i2c.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_fwdgt.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_pmu.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_rcu.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_timer.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_usart.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h
-.\objects\setup.o: D:\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h
-.\objects\setup.o: Src\../Inc/setup.h
-.\objects\setup.o: Src\../Inc/../Inc/config.h
-.\objects\setup.o: Src\../Inc/defines.h
-.\objects\setup.o: Src\../Inc/it.h
+./objects/setup.o: Src\setup.c \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Include\gd32f1x0.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Include\system_gd32f1x0.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Include\gd32f1x0_libopt.h \
+  RTE\_Target_1\RTE_Components.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_adc.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_dbg.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_dma.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_gpio.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_syscfg.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_i2c.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_fwdgt.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_pmu.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_rcu.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_timer.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_usart.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h \
+  C:\Users\PAN\ CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h \
+  Src\..\Inc\setup.h Src\..\Inc\..\Inc\config.h Src\..\Inc\defines.h \
+  Src\..\Inc\defines_2-1.h Src\..\Inc\config.h Src\..\Inc\it.h

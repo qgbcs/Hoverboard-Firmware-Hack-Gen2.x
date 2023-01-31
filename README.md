@@ -1,36 +1,32 @@
 #### Update 2.x:
 - This is a fork from https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
-- with different defines_2-x.h for three different board layouts :-) 
-- Simply choose your layout in Inc/defines.h :-))
+- with different defines_2-x.h for two different board layouts :-) 
+- Simply choose #define LAYOUT_2_0 or #define LAYOUT_2_1 in Inc/config.h :-))
 
 
 #### Update 2.1:
 - That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 - Compiles with Keil version 6 :-))
 
-#### version/layout 2.2:
-![mosfet pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics_2.2/hoverboard_gen2-2_mosfet_pins_gd32F130C8.jpg)
+#### version/layout 2.0:
+
+![otter](https://raw.githubusercontent.com/flo199213/Hoverboard-Firmware-Hack-Gen2/master/Hardware_Overview_small.png)
+
+![mosfet pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_mosfet_pins_gd32F130C8.jpg)
 
 The low side gate drivers each have three smd resitors connected to a PBx and the high side mosfets begin with two resistors connected to a PAx, which confirms the gate driver circuit of the original "Gen1" hoverboard schematics on page 2 of https://raw.githubusercontent.com/EFeru/hoverboard-firmware-hack-FOC/main/docs/20150722_hoverboard_sch.pdf
 
 The pins PB15, PB14 and PA8 can easily be tested with a multimeter as they have double holes connecting to the backside layer of the circuit board.
 
-![hall pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics_2.2/hoverboard_gen2-2_hall_pins_gd32F130C8.jpg)
+![hall pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_hall_pins_gd32F130C8.jpg)
 
-![led pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics_2.2/hoverboard_gen2-2_led_pins_gd32F130C8.jpg)
+![led pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_led_pins_gd32F130C8.jpg)
 
-The documentation of the GD32F130C8 seems to be wrong as the pin 23 is not internally connected to pin 47. Maybe pin 23 is an undocumented GPIO ?
-https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/GD32F130C8%20Dokumentation/GD32F130.pdf
+![uart pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_uart_pins_gd32F130C8.jpg)
 
-![uart pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/schematics_2.2/hoverboard_gen2-2_uart_pins_gd32F130C8.jpg)
-
-again a wrongly documented pin (24) in the gd32F130C8 data sheet :-(
 
 #### version/layout 2.1:
 ![otter](https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1/blob/main/pins-board.jpg)
-
-#### version/layout 2.0:
-![otter](https://raw.githubusercontent.com/flo199213/Hoverboard-Firmware-Hack-Gen2/master/Hardware_Overview_small.png)
 
 
 ### Hoverboard-Firmware-Hack-Gen2.x

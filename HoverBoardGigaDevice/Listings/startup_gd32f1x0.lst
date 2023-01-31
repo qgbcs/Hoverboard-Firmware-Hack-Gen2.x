@@ -557,15 +557,16 @@ ARM Macro Assembler    Page 9
               00000400 
               00000400 
               00000000 
-Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interwork --de
-pend=.\objects\startup_gd32f1x0.d -o.\objects\startup_gd32f1x0.o -I.\RTE\_Targe
-t_1 -ID:\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -ID:\Arm\Packs\GigaDevice
-\GD32F1x0_DFP\3.2.0\Device\Firmware\Peripherals\inc -ID:\Arm\Packs\GigaDevice\G
-D32F1x0_DFP\3.2.0\Device\Include --predefine="__EVAL SETA 1" --predefine="__UVI
-SION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine="GD32F1x0 SETA 1"
- --predefine="GD32F130_150 SETA 1" --predefine="USE_STDPERIPH_DRIVER SETA 1" --
-predefine="_RTE_ SETA 1" --list=.\listings\startup_gd32f1x0.lst RTE\Device\GD32
-F130C8\startup_gd32f1x0.s
+Command Line: --xref --diag_suppress=9931,A1950W --cpu=Cortex-M3 --depend=.\obj
+ects\startup_gd32f1x0.d -o.\objects\startup_gd32f1x0.o -I.\RTE\_Target_1 -I"C:\
+Users\PAN CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include" -I
+"C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Devi
+ce\Firmware\Peripherals\inc" -I"C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\Gig
+aDevice\GD32F1x0_DFP\3.2.1\Device\Include" --predefine="__EVAL SETA 1" --predef
+ine="__UVISION_VERSION SETA 538" --predefine="_RTE_ SETA 1" --predefine="GD32F1
+x0 SETA 1" --predefine="GD32F130_150 SETA 1" --predefine="USE_STDPERIPH_DRIVER 
+SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_gd32f1x0.lst RTE/D
+evice/GD32F130C8/startup_gd32f1x0.s
 
 
 
@@ -576,7 +577,7 @@ STACK 00000000
 
 Symbol: STACK
    Definitions
-      At line 45 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 45 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: STACK unused
@@ -584,18 +585,18 @@ Stack_Mem 00000000
 
 Symbol: Stack_Mem
    Definitions
-      At line 46 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 46 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 342 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 344 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 342 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 344 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 __initial_sp 00000400
 
 Symbol: __initial_sp
    Definitions
-      At line 47 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 47 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 70 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 70 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 Comment: __initial_sp used once
 3 symbols
 
@@ -608,7 +609,7 @@ HEAP 00000000
 
 Symbol: HEAP
    Definitions
-      At line 56 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 56 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: HEAP unused
@@ -616,16 +617,16 @@ Heap_Mem 00000000
 
 Symbol: Heap_Mem
    Definitions
-      At line 58 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 58 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 341 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 343 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 341 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 343 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 __heap_base 00000000
 
 Symbol: __heap_base
    Definitions
-      At line 57 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 57 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: __heap_base unused
@@ -633,7 +634,7 @@ __heap_limit 00000400
 
 Symbol: __heap_limit
    Definitions
-      At line 59 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 59 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: __heap_limit unused
@@ -648,7 +649,7 @@ RESET 00000000
 
 Symbol: RESET
    Definitions
-      At line 65 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 65 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: RESET unused
@@ -656,19 +657,19 @@ __Vectors 00000000
 
 Symbol: __Vectors
    Definitions
-      At line 70 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 70 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 66 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 164 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 66 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 164 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 __Vectors_End 00000168
 
 Symbol: __Vectors_End
    Definitions
-      At line 162 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 162 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 67 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 164 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 67 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 164 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 3 symbols
 
@@ -681,7 +682,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 166 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 166 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: .text unused
@@ -689,52 +690,52 @@ ADC_CMP_IRQHandler 0000001A
 
 Symbol: ADC_CMP_IRQHandler
    Definitions
-      At line 287 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 287 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 100 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 238 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 100 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 238 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 BusFault_Handler 0000000E
 
 Symbol: BusFault_Handler
    Definitions
-      At line 195 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 195 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 75 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 196 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 75 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 196 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN0_RX0_IRQHandler 0000001A
 
 Symbol: CAN0_RX0_IRQHandler
    Definitions
-      At line 312 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 312 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 132 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 263 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 132 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 263 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN0_RX1_IRQHandler 0000001A
 
 Symbol: CAN0_RX1_IRQHandler
    Definitions
-      At line 313 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 313 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 133 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 264 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 133 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 264 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN0_SCE_IRQHandler 0000001A
 
 Symbol: CAN0_SCE_IRQHandler
    Definitions
-      At line 314 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 314 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 134 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 265 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 134 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 265 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN0_TX_IRQHandler 0000001A
 
 Symbol: CAN0_TX_IRQHandler
    Definitions
-      At line 311 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 311 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
 
 
@@ -742,62 +743,62 @@ Symbol: CAN0_TX_IRQHandler
 ARM Macro Assembler    Page 2 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 131 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 262 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 131 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 262 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN1_RX0_IRQHandler 0000001A
 
 Symbol: CAN1_RX0_IRQHandler
    Definitions
-      At line 319 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 319 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 159 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 270 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 159 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 270 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN1_RX1_IRQHandler 0000001A
 
 Symbol: CAN1_RX1_IRQHandler
    Definitions
-      At line 320 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 320 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 160 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 271 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 160 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 271 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN1_SCE_IRQHandler 0000001A
 
 Symbol: CAN1_SCE_IRQHandler
    Definitions
-      At line 321 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 321 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 161 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 272 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 161 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 272 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CAN1_TX_IRQHandler 0000001A
 
 Symbol: CAN1_TX_IRQHandler
    Definitions
-      At line 318 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 318 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 158 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 269 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 158 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 269 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 CEC_IRQHandler 0000001A
 
 Symbol: CEC_IRQHandler
    Definitions
-      At line 303 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 303 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 118 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 254 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 118 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 254 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 DMA_Channel0_IRQHandler 0000001A
 
 Symbol: DMA_Channel0_IRQHandler
    Definitions
-      At line 284 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 284 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 97 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 235 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 97 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 235 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 DMA_Channel1_2_IRQHandler 0000001A
 
@@ -809,43 +810,43 @@ Relocatable symbols
 
 Symbol: DMA_Channel1_2_IRQHandler
    Definitions
-      At line 285 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 285 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 98 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 236 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 98 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 236 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 DMA_Channel3_4_IRQHandler 0000001A
 
 Symbol: DMA_Channel3_4_IRQHandler
    Definitions
-      At line 286 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 286 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 99 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 237 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 99 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 237 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 DMA_Channel5_6_IRQHandler 0000001A
 
 Symbol: DMA_Channel5_6_IRQHandler
    Definitions
-      At line 316 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 316 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 136 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 267 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 136 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 267 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 DebugMon_Handler 00000014
 
 Symbol: DebugMon_Handler
    Definitions
-      At line 209 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 209 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 82 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 210 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 82 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 210 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 Default_Handler 0000001A
 
 Symbol: Default_Handler
    Definitions
-      At line 224 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 224 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: Default_Handler unused
@@ -853,19 +854,19 @@ EXTI0_1_IRQHandler 0000001A
 
 Symbol: EXTI0_1_IRQHandler
    Definitions
-      At line 280 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 280 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 93 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 231 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 93 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 231 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 EXTI2_3_IRQHandler 0000001A
 
 Symbol: EXTI2_3_IRQHandler
    Definitions
-      At line 281 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 281 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 94 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 232 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 94 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 232 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 
 
@@ -877,55 +878,55 @@ EXTI4_15_IRQHandler 0000001A
 
 Symbol: EXTI4_15_IRQHandler
    Definitions
-      At line 282 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 282 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 95 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 233 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 95 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 233 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 FMC_IRQHandler 0000001A
 
 Symbol: FMC_IRQHandler
    Definitions
-      At line 278 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 278 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 91 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 229 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 91 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 229 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 HardFault_Handler 0000000A
 
 Symbol: HardFault_Handler
    Definitions
-      At line 185 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 185 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 73 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 186 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 73 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 186 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C0_ER_IRQHandler 0000001A
 
 Symbol: I2C0_ER_IRQHandler
    Definitions
-      At line 304 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 304 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 120 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 255 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 120 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 255 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C0_EV_IRQHandler 0000001A
 
 Symbol: I2C0_EV_IRQHandler
    Definitions
-      At line 297 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 297 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 111 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 248 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 111 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 248 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C1_ER_IRQHandler 0000001A
 
 Symbol: I2C1_ER_IRQHandler
    Definitions
-      At line 305 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 305 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 122 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 256 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 122 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 256 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C1_EV_IRQHandler 0000001A
 
@@ -937,64 +938,64 @@ Symbol: I2C1_EV_IRQHandler
 ARM Macro Assembler    Page 5 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 298 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 298 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 112 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 249 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 112 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 249 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C2_ER_IRQHandler 0000001A
 
 Symbol: I2C2_ER_IRQHandler
    Definitions
-      At line 307 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 307 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 124 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 258 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 124 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 258 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 I2C2_EV_IRQHandler 0000001A
 
 Symbol: I2C2_EV_IRQHandler
    Definitions
-      At line 306 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 306 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 123 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 257 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 123 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 257 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 LVD_IRQHandler 0000001A
 
 Symbol: LVD_IRQHandler
    Definitions
-      At line 276 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 276 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 89 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 227 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 89 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 227 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 MemManage_Handler 0000000C
 
 Symbol: MemManage_Handler
    Definitions
-      At line 190 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 190 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 74 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 191 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 74 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 191 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 NMI_Handler 00000008
 
 Symbol: NMI_Handler
    Definitions
-      At line 180 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 180 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 72 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 181 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 72 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 181 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 PendSV_Handler 00000016
 
 Symbol: PendSV_Handler
    Definitions
-      At line 214 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 214 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 84 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 215 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 84 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 215 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 
 
@@ -1006,61 +1007,61 @@ RCU_IRQHandler 0000001A
 
 Symbol: RCU_IRQHandler
    Definitions
-      At line 279 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 279 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 92 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 230 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 92 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 230 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 RTC_IRQHandler 0000001A
 
 Symbol: RTC_IRQHandler
    Definitions
-      At line 277 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 277 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 90 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 228 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 90 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 228 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
    Definitions
-      At line 169 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 169 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 71 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 170 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 71 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 170 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SLCD_IRQHandler 0000001A
 
 Symbol: SLCD_IRQHandler
    Definitions
-      At line 315 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 315 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 135 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 266 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 135 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 266 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SPI0_IRQHandler 0000001A
 
 Symbol: SPI0_IRQHandler
    Definitions
-      At line 299 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 299 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 113 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 250 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 113 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 250 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SPI1_IRQHandler 0000001A
 
 Symbol: SPI1_IRQHandler
    Definitions
-      At line 300 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 300 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 114 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 251 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 114 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 251 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SPI2_IRQHandler 0000001A
 
 Symbol: SPI2_IRQHandler
    Definitions
-      At line 317 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 317 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 
 
@@ -1068,62 +1069,62 @@ ARM Macro Assembler    Page 7 Alphabetic symbol ordering
 Relocatable symbols
 
    Uses
-      At line 139 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 268 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 139 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 268 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SVC_Handler 00000012
 
 Symbol: SVC_Handler
    Definitions
-      At line 204 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 204 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 81 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 205 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 81 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 205 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 SysTick_Handler 00000018
 
 Symbol: SysTick_Handler
    Definitions
-      At line 219 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 219 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 85 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 220 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 85 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 220 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER0_BRK_UP_TRG_COM_IRQHandler 0000001A
 
 Symbol: TIMER0_BRK_UP_TRG_COM_IRQHandler
    Definitions
-      At line 288 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 288 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 101 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 239 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 101 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 239 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER0_Channel_IRQHandler 0000001A
 
 Symbol: TIMER0_Channel_IRQHandler
    Definitions
-      At line 289 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 289 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 102 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 240 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 102 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 240 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER13_IRQHandler 0000001A
 
 Symbol: TIMER13_IRQHandler
    Definitions
-      At line 293 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 293 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 107 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 244 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 107 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 244 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER14_IRQHandler 0000001A
 
 Symbol: TIMER14_IRQHandler
    Definitions
-      At line 294 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 294 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 108 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 245 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 108 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 245 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER15_IRQHandler 0000001A
 
@@ -1135,61 +1136,61 @@ Relocatable symbols
 
 Symbol: TIMER15_IRQHandler
    Definitions
-      At line 295 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 295 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 109 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 246 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 109 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 246 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER16_IRQHandler 0000001A
 
 Symbol: TIMER16_IRQHandler
    Definitions
-      At line 296 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 296 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 110 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 247 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 110 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 247 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER1_IRQHandler 0000001A
 
 Symbol: TIMER1_IRQHandler
    Definitions
-      At line 290 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 290 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 103 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 241 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 103 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 241 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER2_IRQHandler 0000001A
 
 Symbol: TIMER2_IRQHandler
    Definitions
-      At line 291 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 291 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 104 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 242 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 104 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 242 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TIMER5_DAC_IRQHandler 0000001A
 
 Symbol: TIMER5_DAC_IRQHandler
    Definitions
-      At line 292 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 292 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 105 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 243 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 105 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 243 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 TSI_IRQHandler 0000001A
 
 Symbol: TSI_IRQHandler
    Definitions
-      At line 283 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 283 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 96 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 234 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 96 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 234 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 USART0_IRQHandler 0000001A
 
 Symbol: USART0_IRQHandler
    Definitions
-      At line 301 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 301 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
 
 
@@ -1197,62 +1198,62 @@ Symbol: USART0_IRQHandler
 ARM Macro Assembler    Page 9 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 115 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 252 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 115 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 252 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 USART1_IRQHandler 0000001A
 
 Symbol: USART1_IRQHandler
    Definitions
-      At line 302 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 302 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 116 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 253 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 116 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 253 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 USBDWakeUp_IRQHandler 0000001A
 
 Symbol: USBDWakeUp_IRQHandler
    Definitions
-      At line 310 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 310 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 130 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 261 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 130 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 261 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 USBD_HP_IRQHandler 0000001A
 
 Symbol: USBD_HP_IRQHandler
    Definitions
-      At line 309 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 309 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 126 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 260 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 126 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 260 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 USBD_LP_IRQHandler 0000001A
 
 Symbol: USBD_LP_IRQHandler
    Definitions
-      At line 308 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 308 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 125 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 259 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 125 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 259 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 UsageFault_Handler 00000010
 
 Symbol: UsageFault_Handler
    Definitions
-      At line 200 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 200 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 76 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 201 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 76 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 201 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 WWDGT_IRQHandler 0000001A
 
 Symbol: WWDGT_IRQHandler
    Definitions
-      At line 275 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 275 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 88 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 226 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 88 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 226 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 __user_initial_stackheap 0000001C
 
@@ -1264,9 +1265,9 @@ Relocatable symbols
 
 Symbol: __user_initial_stackheap
    Definitions
-      At line 340 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 340 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 338 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 338 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 Comment: __user_initial_stackheap used once
 60 symbols
 
@@ -1279,27 +1280,27 @@ Heap_Size 00000400
 
 Symbol: Heap_Size
    Definitions
-      At line 54 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 54 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 58 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 343 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 58 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 343 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 Stack_Size 00000400
 
 Symbol: Stack_Size
    Definitions
-      At line 43 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 43 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 46 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
-      At line 342 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 46 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
+      At line 342 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 
 __Vectors_Size 00000168
 
 Symbol: __Vectors_Size
    Definitions
-      At line 164 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 164 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 68 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 68 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 Comment: __Vectors_Size used once
 3 symbols
 
@@ -1312,23 +1313,23 @@ SystemInit 00000000
 
 Symbol: SystemInit
    Definitions
-      At line 171 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 171 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 173 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 173 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 Comment: SystemInit used once
 __main 00000000
 
 Symbol: __main
    Definitions
-      At line 172 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 172 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
-      At line 175 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 175 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
 Comment: __main used once
 __use_two_region_memory 00000000
 
 Symbol: __use_two_region_memory
    Definitions
-      At line 337 in file RTE\Device\GD32F130C8\startup_gd32f1x0.s
+      At line 337 in file RTE/Device/GD32F130C8/startup_gd32f1x0.s
    Uses
       None
 Comment: __use_two_region_memory unused
