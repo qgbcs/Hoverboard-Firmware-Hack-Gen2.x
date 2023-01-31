@@ -38,13 +38,22 @@
 // only the master has a buzzer :-)
 
 // LAYOUT_2_X is used in defines.h
-#define LAYOUT_2_0	// https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
-//#define LAYOUT_2_1	// https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
+//#define LAYOUT_2_0	// https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
+#define LAYOUT_2_1	// https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 
 
-//#define MASTER		// Select if firmware is for master or slave board
+#define MASTER		// Select if firmware is for master or slave board
 	// if left uncommented = '//#define MASTER' , then SLAVE is defined at the end of this config.h :-)
 
+
+#ifdef MASTER
+	#define SPEED_COEFFICIENT   -1
+	#define STEER_COEFFICIENT   1
+	
+	#define TEST_SPEED	// will discard uart input and repeat speed from -300 to 300 instead
+#else
+	#define SLAVE 												// Select if firmware is for master or slave board
+#endif
 
 // ################################################################################
 
@@ -78,11 +87,5 @@
 // ###### ARMCHAIR ######
 #define FILTER_SHIFT 12 						// Low-pass filter for pwm, rank k=12
 
-#ifdef MASTER
-#define SPEED_COEFFICIENT   -1
-#define STEER_COEFFICIENT   1
-#else
-	#define SLAVE 												// Select if firmware is for master or slave board
-#endif
 
 #endif

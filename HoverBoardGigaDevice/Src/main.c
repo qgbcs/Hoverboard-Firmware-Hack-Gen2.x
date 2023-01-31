@@ -50,7 +50,7 @@
 int32_t steer = 0; 												// global variable for steering. -1000 to 1000
 int32_t speed = 0; 												// global variable for speed.    -1000 to 1000
 FlagStatus activateWeakening = RESET;			// global variable for weakening
-FlagStatus beepsBackwards = RESET;  			// global variable for beeps backwards
+FlagStatus beepsBackwards = SET;  			// global variable for beeps backwards
 			
 extern uint8_t buzzerFreq;    						// global variable for the buzzer pitch. can be 1, 2, 3, 4, 5, 6, 7...
 extern uint8_t buzzerPattern; 						// global variable for the buzzer pattern. can be 1, 2, 3, 4, 5, 6, 7...
@@ -342,6 +342,11 @@ int main (void)
 			// Request steering data
 			SendSteerDevice();
 		}
+		
+		#ifdef TEST_SPEED
+			speed = 3 * (ABS((	((int32_t)steerCounter+100) % 400) - 200) - 100);
+		//speed = 300;
+		#endif
 		
 		// Calculate expo rate for less steering with higher speeds
 		expo = MAP((float)ABS(speed), 0, 1000, 1, 0.5);
