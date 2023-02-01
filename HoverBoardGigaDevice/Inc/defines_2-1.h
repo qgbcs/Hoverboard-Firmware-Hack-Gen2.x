@@ -28,11 +28,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef DEFINES_H
-#define DEFINES_H
-
-#include "gd32f1x0.h"
-#include "../Inc/config.h"
 
 // LED defines CORRECT
 #define LED_GREEN GPIO_PIN_3
@@ -125,21 +120,3 @@
 #define CHARGE_STATE_PORT GPIOC
 #endif
 
-// ADC value conversion defines
-#define MOTOR_AMP_CONV_DC_AMP 0.201465201465  // 3,3V * 1/3 - 0,004Ohm * IL(ampere) = (ADC-Data/4095) *3,3V
-#define ADC_BATTERY_VOLT      0.024169921875 	// V_Batt to V_BattMeasure = factor 30: ( (ADC-Data/4095) *3,3V *30 )
-
-// Useful math function defines
-#define ABS(a) (((a) < 0.0) ? -(a) : (a))
-#define CLAMP(x, low, high) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
-#define MAX(x, high) (((x) > (high)) ? (high) : (x))
-#define MAP(x, xMin, xMax, yMin, yMax) ((x - xMin) * (yMax - yMin) / (xMax - xMin) + yMin)
-
-// ADC buffer struct
-typedef struct
-{
-  uint16_t v_batt;
-	uint16_t current_dc;
-} adc_buf_t;
-
-#endif
