@@ -41,7 +41,7 @@
 
 // Only master communicates with steerin device
 #ifdef MASTER
-#define USART_STEER_TX_BYTES 2   // Transmit byte count including start '/' and stop character '\n'
+//#define USART_STEER_TX_BYTES 2   // Transmit byte count including start '/' and stop character '\n'
 #define USART_STEER_RX_BYTES 8   // Receive byte count including start '/' and stop character '\n'
 
 extern uint8_t usartSteer_COM_rx_buf[USART_STEER_COM_RX_BUFFERSIZE];
@@ -54,19 +54,60 @@ void CheckUSARTSteerInput(uint8_t u8USARTBuffer[]);
 extern int32_t steer;
 extern int32_t speed;
 
+typedef struct{
+   uint8_t cStart;		//  = '/';
+   int16_t  iSpeed;
+   int16_t  iSteer;
+   uint16_t checksum;
+   uint8_t cEnd;			//  = '\n';
+} SerialServer2Hover;
+
+extern float batteryVoltage; 							// global variable for battery voltage
+extern float currentDC; 									// global variable for current dc
+extern float realSpeed; 									// global variable for real Speed
+
+#define START_FRAME         0xABCD       // [-] Start frme definition for reliable serial communication
+
+typedef struct{
+   uint16_t cStart;		//  = 0xABCD;
+   int16_t iSpeedL;		// 100* km/h
+   int16_t iSpeedR;		// 100* km/h
+   uint16_t iVolt;		// 100* V
+   int16_t iAmpL;		// 100* A
+   int16_t iAmpR;		// 100* A
+   uint16_t checksum;
+} SerialHover2Server;
+
+int16_t swap_int16( int16_t val ) 
+{
+    return (val << 8) | ((val >> 8) & 0xFF);
+}
+
 //----------------------------------------------------------------------------
 // Send frame to steer device
 //----------------------------------------------------------------------------
 void SendSteerDevice(void)
 {
-	int index = 0;
-	uint8_t buffer[USART_STEER_TX_BYTES];
-	
 	// Ask for steer input
-	buffer[index++] = '/';
-	buffer[index++] = '\n';
 	
-	SendBuffer(USART_STEER_COM, buffer, index);
+	SerialHover2Server oData;
+	oData.cStart = START_FRAME;
+	oData.iVolt = (uint16_t)	(batteryVoltage * 100);
+	oData.iAmpL = (int16_t) (currentDC * 100);
+	oData.iAmpR = 42;
+	oData.iSpeedL = (int16_t) (realSpeed * 100);
+	oData.iSpeedR = -42;
+	oData.checksum = 	CalcCRC((uint8_t*) &oData, sizeof(oData) - 2);	// (first bytes except crc)
+	SendBuffer(USART_STEER_COM, (uint8_t*) &oData, sizeof(oData));
+
+/*	
+	uint8_t buffer[2];
+	int index = 0;
+	buffer[0] = '/';
+	buffer[1] = '\n';
+	
+	SendBuffer(USART_STEER_COM, buffer, 2);
+	*/
 }
 
 //----------------------------------------------------------------------------
@@ -104,31 +145,23 @@ void UpdateUSARTSteerInput(void)
 //----------------------------------------------------------------------------
 void CheckUSARTSteerInput(uint8_t USARTBuffer[])
 {
-	// Auxiliary variables
-	uint16_t crc;
-	
-	// Check start and stop character
-	if ( USARTBuffer[0] != '/' ||
-		USARTBuffer[USART_STEER_RX_BYTES - 1] != '\n')
-	{
+	if ( USARTBuffer[0] != '/' ||	USARTBuffer[USART_STEER_RX_BYTES - 1] != '\n')
 		return;
-	}
 	
-	// Calculate CRC (first bytes except crc and stop byte)
-	crc = CalcCRC(USARTBuffer, USART_STEER_RX_BYTES - 3);
+	uint16_t crc = CalcCRC(USARTBuffer, USART_STEER_RX_BYTES - 3);	// (first bytes except crc and stop byte)
 	
-	// Check CRC
-	if ( USARTBuffer[USART_STEER_RX_BYTES - 3] != ((crc >> 8) & 0xFF) ||
-		USARTBuffer[USART_STEER_RX_BYTES - 2] != (crc & 0xFF))
-	{
+	if ( USARTBuffer[USART_STEER_RX_BYTES - 2] != ((crc >> 8) & 0xFF) ||
+				USARTBuffer[USART_STEER_RX_BYTES - 3] != (crc & 0xFF))
 		return;
-	}
 	
-	// Calculate result speed value -1000 to 1000
-	speed = (int16_t)((USARTBuffer[1] << 8) | USARTBuffer[2]);
-	
-	// Calculate result steering value -1000 to 1000
-	steer = (int16_t)((USARTBuffer[3] << 8) | USARTBuffer[4]);
+	speed = (int16_t)((USARTBuffer[2] << 8) | USARTBuffer[1]);	// speed value -1000 to 1000
+	steer = (int16_t)((USARTBuffer[4] << 8) | USARTBuffer[3]);	// steering value -1000 to 1000
+
+	//SerialServer2Hover* pData = (SerialServer2Hover*) USARTBuffer;
+	//speed = swap_int16(pData->iSpeed);
+	//steer = swap_int16(pData->iSteer);
+	//if (speed > 300) speed = 300	else if (speed < -300) speed = -300;
+
 	
 	// Reset the pwm timout to avoid stopping motors
 	ResetTimeout();

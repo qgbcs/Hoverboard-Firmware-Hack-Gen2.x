@@ -28,49 +28,31 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "RCReceiver.h"
-#include "SteeringSerial.h"
-#include "utils.h"
+#ifndef RCRECEIVER_H
+#define RCRECEIVER_H
 
-void setup()
-{
-  // Initialize steering serial
-  InitSteeringSerial();
+#include <inttypes.h>
+#include <Arduino.h>
+#include "util.h"
+//----------------------------------------------------------------------------
+// Defines
+//----------------------------------------------------------------------------
+#define SERVOS 3
+#define ZERO_US 1500
 
-  // Enable Debug LED
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, 1);
+//----------------------------------------------------------------------------
+// Initializes the RC receiver
+//----------------------------------------------------------------------------
+void InitRCReceiver(void);
 
-  // Initialize RC receiver
-  InitRCReceiver();
+//----------------------------------------------------------------------------
+// Starts the receiver
+//----------------------------------------------------------------------------
+void RCReceiverStart();
 
-  // Start RC receiver
-  RCReceiverStart();
-}
+//----------------------------------------------------------------------------
+// Returns the current result value of specified pin
+//----------------------------------------------------------------------------
+uint16_t GetRCValue(uint8_t pin);
 
-void loop()
-{
-  uint16_t channel1 = GetRCValue(0);
-  uint16_t channel2 = GetRCValue(1);
-  uint16_t channel3 = GetRCValue(2);
-  
-  // Activate/deactivate speed mode
-  float factor = channel3 < 1500 ? 0.5 : 1;
-  
-  // Handle receiver values
-  SetSpeed(channel1, factor);
-  SetSteer(channel2);
-
-/*  SendDebug(); */
-  
-  // Reply only when you receive data
-  if (Serial.available() > 0)
-  {
-    char character = Serial.read();
-    if (character == '\n')
-    {
-      SendAnswer();
-    }
-  }
-}
-
+#endif

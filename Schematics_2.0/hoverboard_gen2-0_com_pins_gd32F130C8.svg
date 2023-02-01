@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.2552701"
-     inkscape:cx="411.86353"
-     inkscape:cy="668.38202"
+     inkscape:cx="388.36263"
+     inkscape:cy="668.38205"
      inkscape:window-width="1920"
      inkscape:window-height="986"
      inkscape:window-x="-11"
@@ -310,12 +310,12 @@
          y="175.50426"
          id="tspan12544">Gnd</tspan><tspan
          sodipodi:role="line"
-         style="text-align:start;text-anchor:start;fill:#00ff00;stroke:#000000;stroke-width:0.120503;stroke-dasharray:none"
+         style="text-align:start;text-anchor:start;fill:#ffff00;stroke:#000000;stroke-width:0.120503;stroke-dasharray:none"
          x="85.900482"
          y="182.59473"
          id="tspan12548">TX B6</tspan><tspan
          sodipodi:role="line"
-         style="text-align:start;text-anchor:start;fill:#ffff00;stroke:#000000;stroke-width:0.120503;stroke-dasharray:none"
+         style="text-align:start;text-anchor:start;fill:#00ff00;stroke:#000000;stroke-width:0.120503;stroke-dasharray:none"
          x="85.900482"
          y="189.6852"
          id="tspan12660">RX B7</tspan><tspan
