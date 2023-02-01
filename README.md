@@ -26,6 +26,8 @@ The pins PB15, PB14 and PA8 can easily be tested with a multimeter as they have 
 
 ![uart pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_uart_pins_gd32F130C8.jpg)
 
+![comm pins](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Schematics_2.0/hoverboard_gen2-0_com_pins_gd32F130C8.jpg)
+
 
 #### version/layout 2.1:
 ![layout 2.1](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-1.jpg)
