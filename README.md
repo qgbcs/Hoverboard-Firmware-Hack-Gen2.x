@@ -21,7 +21,7 @@
 ![layout 2.1](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-1.jpg)
 
 #### todo: version/layout 2.2:
-![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Fir[mware-Hack-Gen2.x/main/Overview_2-2.jpg)
+![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-2.jpg)
 
 - [all info](Schematics_2.2/)
 - [how to unlock..](https://github.com/JRomainG/GD32F130K6-hoverboard-hack)
