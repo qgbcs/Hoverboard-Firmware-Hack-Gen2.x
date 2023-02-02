@@ -42,7 +42,7 @@
 //#define LAYOUT_2_1	// https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 
 
-#define MASTER		// Select if firmware is for master or slave board
+//#define MASTER		// Select if firmware is for master or slave board
 	// if left uncommented = '//#define MASTER' , then SLAVE is defined at the end of this config.h :-)
 
 
