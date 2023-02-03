@@ -69,6 +69,6 @@ Bonus: Kristian Kosev (krisstakos) has  included **rename.bat** which will renam
 
 #### Arduino IDE examples
 
-![screenshot ](Arduino%20Examples/TestSpeed_screenshot.jpg)
+![screenshot ](Arduino%20Examples/screenshot_TestSpeed.jpg)
 - [download code here](Arduino%20Examples/)
 
