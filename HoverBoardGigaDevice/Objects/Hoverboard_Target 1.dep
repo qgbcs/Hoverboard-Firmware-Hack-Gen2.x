@@ -26,8 +26,8 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\setup.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\it.h)(0x63D8F408)
@@ -65,8 +65,8 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\setup.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 F (.\Src\setup.c)(0x63D957B3)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -O1 -fno-function-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Firmware/Peripherals/inc"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Include"-D__UVISION_VERSION="538" -D_RTE_ -DGD32F1x0 -DGD32F130_150 -DUSE_STDPERIPH_DRIVER -D_RTE_-o ./objects/setup.o -MD)
@@ -95,8 +95,8 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\setup.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\it.h)(0x63D8F408)
@@ -126,8 +126,8 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\it.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\bldc.h)(0x63D8F408)
@@ -185,9 +185,9 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_wwdgt.h)(0x5DB338C0)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\setup.h)(0x63D8F408)
 I (Src\..\Inc\comms.h)(0x63D8F408)
@@ -196,7 +196,7 @@ I (Src\..\Inc\commsBluetooth.h)(0x63D8F408)
 I (Src\..\Inc\led.h)(0x63D8F408)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6388AB78)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388AB78)
-F (.\Src\commsSteering.c)(0x63DA82BE)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -O1 -fno-function-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Firmware/Peripherals/inc"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Include"-D__UVISION_VERSION="538" -D_RTE_ -DGD32F1x0 -DGD32F130_150 -DUSE_STDPERIPH_DRIVER -D_RTE_-o ./objects/commssteering.o -MD)
+F (.\Src\commsSteering.c)(0x63DBC422)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -O1 -fno-function-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/_Target_1-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Firmware/Peripherals/inc"-I"C:/Users/PAN CF-LX6/AppData/Local/Arm/Packs/GigaDevice/GD32F1x0_DFP/3.2.1/Device/Include"-D__UVISION_VERSION="538" -D_RTE_ -DGD32F1x0 -DGD32F130_150 -DUSE_STDPERIPH_DRIVER -D_RTE_-o ./objects/commssteering.o -MD)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Include\gd32f1x0.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626FAD4E)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388AB78)
@@ -222,11 +222,11 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\it.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\comms.h)(0x63D8F408)
 I (Src\..\Inc\commsSteering.h)(0x63D8F408)
 I (Src\..\Inc\setup.h)(0x63D8F408)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\bldc.h)(0x63D8F408)
@@ -258,11 +258,11 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\it.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\comms.h)(0x63D8F408)
 I (Src\..\Inc\commsMasterSlave.h)(0x63D8F408)
 I (Src\..\Inc\setup.h)(0x63D8F408)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 I (Src\..\Inc\bldc.h)(0x63D8F408)
@@ -294,12 +294,12 @@ I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Dev
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h)(0x5DAED364)
 I (C:\Users\PAN CF-LX6\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h)(0x5DB71C90)
 I (Src\..\Inc\led.h)(0x63D8F408)
-I (Src\..\Inc\..\Inc\config.h)(0x63DB7CE8)
-I (Src\..\Inc\config.h)(0x63DB7CE8)
+I (Src\..\Inc\..\Inc\config.h)(0x63DB8B3C)
+I (Src\..\Inc\config.h)(0x63DB8B3C)
 I (Src\..\Inc\defines.h)(0x63D95746)
 I (Src\..\Inc\defines_2-0.h)(0x63D95737)
 F (.\Inc\defines.h)(0x63D95746)()
-F (.\Inc\config.h)(0x63DB7CE8)()
+F (.\Inc\config.h)(0x63DB8B3C)()
 F (.\Inc\bldc.h)(0x63D8F408)()
 F (.\Inc\setup.h)(0x63D8F408)()
 F (.\Inc\it.h)(0x63D8F408)()

@@ -45,10 +45,8 @@
 #define USART_STEER_RX_BYTES 8   // Receive byte count including start '/' and stop character '\n'
 
 extern uint8_t usartSteer_COM_rx_buf[USART_STEER_COM_RX_BUFFERSIZE];
-static uint8_t sSteerRecord = 0;
 static uint8_t sUSARTSteerRecordBuffer[USART_STEER_RX_BYTES];
-static uint8_t sUSARTSteerRecordBufferCounter = 0;
-
+static int16_t iRecordingPos = -1;		// if >= 0 incoming bytes are recorded until message size reached
 void CheckUSARTSteerInput(uint8_t u8USARTBuffer[]);
 
 extern int32_t steer;
@@ -116,26 +114,16 @@ void SendSteerDevice(void)
 void UpdateUSARTSteerInput(void)
 {
 	uint8_t character = usartSteer_COM_rx_buf[0];
-	
-	// Start character is captured, start record
-	if (character == '/')
-	{
-		sUSARTSteerRecordBufferCounter = 0;
-		sSteerRecord = 1;
-	}
+	if (character == '/')	// Start character is captured, start record
+		iRecordingPos = 0;
 
-	if (sSteerRecord)
+	if (iRecordingPos >= 0)
 	{
-		sUSARTSteerRecordBuffer[sUSARTSteerRecordBufferCounter] = character;
-		sUSARTSteerRecordBufferCounter++;
-		
-		if (sUSARTSteerRecordBufferCounter >= USART_STEER_RX_BYTES)
+		sUSARTSteerRecordBuffer[iRecordingPos++] = character;
+		if (iRecordingPos >= USART_STEER_RX_BYTES)
 		{
-			sUSARTSteerRecordBufferCounter = 0;
-			sSteerRecord = 0;
-			
-			// Check input
-			CheckUSARTSteerInput (sUSARTSteerRecordBuffer);
+			iRecordingPos = -1;
+			CheckUSARTSteerInput (sUSARTSteerRecordBuffer);	// Check input
 		}
 	}
 }

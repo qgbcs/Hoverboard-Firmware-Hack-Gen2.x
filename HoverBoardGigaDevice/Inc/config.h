@@ -42,7 +42,7 @@
 //#define LAYOUT_2_1	// https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
 
 
-//#define MASTER		// Select if firmware is for master or slave board
+#define MASTER		// Select if firmware is for master or slave board
 	// if left uncommented = '//#define MASTER' , then SLAVE is defined at the end of this config.h :-)
 
 
@@ -50,7 +50,7 @@
 	#define SPEED_COEFFICIENT   -1
 	#define STEER_COEFFICIENT   1
 	
-	//#define TEST_SPEED	// will discard uart input and repeat speed from -300 to 300 instead
+	#define TEST_SPEED	// will discard uart input and repeat speed from -300 to 300 instead
 #else
 	#define SLAVE 												// Select if firmware is for master or slave board
 #endif
