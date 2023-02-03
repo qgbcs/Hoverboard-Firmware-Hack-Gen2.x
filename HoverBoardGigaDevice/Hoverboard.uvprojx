@@ -445,14 +445,14 @@
               <FilePath>.\Inc\config.h</FilePath>
             </File>
             <File>
-              <FileName>bldc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\bldc.h</FilePath>
-            </File>
-            <File>
               <FileName>setup.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Inc\setup.h</FilePath>
+            </File>
+            <File>
+              <FileName>bldc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\bldc.h</FilePath>
             </File>
             <File>
               <FileName>it.h</FileName>

@@ -459,7 +459,7 @@
 
   <Group>
     <GroupName>Inc</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -494,8 +494,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Inc\bldc.h</PathWithFileName>
-      <FilenameWithoutPath>bldc.h</FilenameWithoutPath>
+      <PathWithFileName>.\Inc\setup.h</PathWithFileName>
+      <FilenameWithoutPath>setup.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -506,8 +506,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Inc\setup.h</PathWithFileName>
-      <FilenameWithoutPath>setup.h</FilenameWithoutPath>
+      <PathWithFileName>.\Inc\bldc.h</PathWithFileName>
+      <FilenameWithoutPath>bldc.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

@@ -25,11 +25,22 @@
 #define MAX(x, high) (((x) > (high)) ? (high) : (x))
 #define MAP(x, xMin, xMax, yMin, yMax) ((x - xMin) * (yMax - yMin) / (xMax - xMin) + yMin)
 
+
 // ADC buffer struct
 typedef struct
 {
   uint16_t v_batt;
 	uint16_t current_dc;
 } adc_buf_t;
+
+//#pragma pack(1)
+typedef struct
+{
+  uint8_t wState;
+	float currentDC; 									// global variable for current dc
+	float realSpeed; 									// global variable for real Speed
+} DataSlave;
+
+
 
 #endif		// DEFINES_H

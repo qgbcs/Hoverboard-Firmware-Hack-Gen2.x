@@ -47,6 +47,10 @@
 //#include "arm_math.h" 
 
 #ifdef MASTER
+
+
+DataSlave oDataSlave;
+
 int32_t steer = 0; 												// global variable for steering. -1000 to 1000
 int32_t speed = 0; 												// global variable for speed.    -1000 to 1000
 FlagStatus activateWeakening = RESET;			// global variable for weakening

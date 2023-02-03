@@ -50,7 +50,7 @@
 	#define SPEED_COEFFICIENT   -1
 	#define STEER_COEFFICIENT   1
 	
-	#define TEST_SPEED	// will discard uart input and repeat speed from -300 to 300 instead
+	//#define TEST_SPEED	// will discard uart input and repeat speed from -300 to 300 instead
 #else
 	#define SLAVE 												// Select if firmware is for master or slave board
 #endif

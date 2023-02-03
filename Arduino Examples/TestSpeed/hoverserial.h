@@ -101,9 +101,9 @@ template <typename O,typename I> void HoverSendLR(O& oSerial, I iSpeedLeft, I iS
 void HoverLog(SerialHover2Server& oData)
 {
   DEBUGT("iSpeedL",(float)oData.iSpeedL/100.0);
-  //DEBUGT(" iSpeedR",(float)oData.iSpeedR/100.0);
+  DEBUGT(" iSpeedR",(float)oData.iSpeedR/100.0);
   DEBUGT("\tiAmpL",(float)oData.iAmpL/100.0);
-  //DEBUGT(" iAmpR",(float)oData.iAmpR/100.0);
+  DEBUGT(" iAmpR",(float)oData.iAmpR/100.0);
   DEBUGLN("\tiVolt",(float)oData.iVolt/100.0);
   //Serial.print("\tcrc="); Serial.println(oData.checksum,HEX);
 }

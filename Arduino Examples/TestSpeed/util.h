@@ -6,9 +6,11 @@
 #ifdef _DEBUG
   #define DEBUG(txt, val) {Serial.print(F(txt)); Serial.print(F(": ")); Serial.print(val);}
   #define DEBUGT(txt, val) {Serial.print(F(txt)); Serial.print(F(": ")); Serial.print(val); Serial.print(F("\t"));}
+  #define DEBUGTX(txt, val) {Serial.print(F(txt)); Serial.print(F(": ")); Serial.print(val,HEX); Serial.print(F("\t"));}
   #define DEBUGLN(txt, val) {Serial.print(F(txt)); Serial.print(F(": ")); Serial.println(val);}
 #else
   #define DEBUG(txt, val)
   #define DEBUGT(txt, val)
+  #define DEBUGTX(txt, val)
   #define DEBUGLN(txt, val)
 #endif
