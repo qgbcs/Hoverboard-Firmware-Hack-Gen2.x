@@ -10,21 +10,27 @@
 - That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 - Compiles with Keil version 6 :-))
 
+
 #### version/layout 2.0:
-
 ![layout 2.0](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-0.jpg)
-
 - [pin configuration](pins_2.0.md)
-- [all info](Schematics_2.0/)
+- [details](Schematics_2.0/)
+
 
 #### version/layout 2.1:
 ![layout 2.1](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-1.jpg)
 
+
 #### todo: version/layout 2.2:
 ![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-2.jpg)
-
-- [all info](Schematics_2.2/)
+- [details](Schematics_2.2/)
 - [how to unlock..](https://github.com/JRomainG/GD32F130K6-hoverboard-hack)
+
+
+#### todo: version/layout 2.3:
+![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-3.jpg)
+- [details](Schematics_2.3/)
+
 
 ### Hoverboard-Firmware-Hack-Gen2.x
 
