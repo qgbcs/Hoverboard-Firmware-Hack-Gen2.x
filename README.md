@@ -10,22 +10,26 @@
 - That's a fork from https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 - Compiles with Keil version 6 :-))
 
+---
 
 #### version/layout 2.0:
 ![layout 2.0](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-0.jpg)
 - [pin configuration](pins_2.0.md)
 - [details](Schematics_2.0/)
 
+--
 
 #### version/layout 2.1:
 ![layout 2.1](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-1.jpg)
 
+--
 
 #### todo: version/layout 2.2:
 ![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-2.jpg)
 - [details](Schematics_2.2/)
 - [how to unlock..](https://github.com/JRomainG/GD32F130K6-hoverboard-hack)
 
+--
 
 #### todo: version/layout 2.3:
 ![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-3.jpg)
@@ -66,6 +70,8 @@ Bonus: Kristian Kosev (krisstakos) has  included **rename.bat** which will renam
 - Hold the powerbutton while flashing the firmware, as the controller releases the power latch and switches itself off during flashing
 - If Flashing with Keil using a ST-Link dongle crashes, download a fixed dll here: https://developer.arm.com/documentation/ka005381/latest
 - ST-Link_Utility and Stm32CubeProgrammer seem to have problems to programm the GD32F130. Try ` st-flash write hoverboard.bin 0x8000000 ` with this open source utility: https://github.com/stlink-org/stlink/releases (ordinary Windows 10 64 bit: x86_64-w64-mingw32.zip )
+
+---
 
 #### Arduino IDE examples
 
