@@ -286,7 +286,8 @@ int main (void)
   SysTick_Config(SystemCoreClock / 100);
 	
 	// Init watchdog
-	if (Watchdog_init() == ERROR)
+	if (
+		Watchdog_init() == ERROR)
 	{
 		// If an error accours with watchdog initialization do not start device
 		while(1);

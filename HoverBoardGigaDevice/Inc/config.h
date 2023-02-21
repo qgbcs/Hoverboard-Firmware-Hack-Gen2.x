@@ -73,6 +73,17 @@
 
 // ################################################################################
 
+
+#define BAT_CELLS         10        // battery number of cells. Normal Hoverboard battery: 10s
+#define CELL_LOW_LVL1     3.5       // Gently beeps, show green battery symbol above this Level.
+#define CELL_LOW_LVL2     3.3       // Battery almost empty, show orange battery symbol above this Level. Charge now! 
+#define CELL_LOW_DEAD     3.1       // Undervoltage lockout, show red battery symbol above this Level.
+
+#define BAT_LOW_LVL1     BAT_CELLS * CELL_LOW_LVL1
+#define BAT_LOW_LVL2     BAT_CELLS * CELL_LOW_LVL2
+#define BAT_LOW_DEAD     BAT_CELLS * CELL_LOW_DEAD
+
+/*
 #define BAT_LOW_LVL1     35.0       // Gently beeps, show green battery symbol above this Level.
 #define BAT_LOW_LVL2     33.0       // Battery almost empty, show orange battery symbol above this Level. Charge now! 
 #define BAT_LOW_DEAD     31.0       // Undervoltage lockout, show red battery symbol above this Level.
@@ -80,6 +91,7 @@
 //#define BAT_LOW_LVL1     29.0
 //#define BAT_LOW_LVL2     28.0
 //#define BAT_LOW_DEAD     27.0
+*/
 
 // ################################################################################
 #endif
