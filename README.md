@@ -29,9 +29,14 @@
 
 
 #### todo: version/layout 2.3:
-![layout 2.2](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-3.jpg)
+![layout 2.3](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-3.jpg)
 - [details](Schematics_2.3/)
 
+
+#### todo: version/layout 2.4:
+![layout 2.4](https://raw.githubusercontent.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/main/Overview_2-4.jpg)
+- [details](Schematics_2.4/)
+- [issue](issues/3)
 ---
 
 ### Hoverboard-Firmware-Hack-Gen2.x
