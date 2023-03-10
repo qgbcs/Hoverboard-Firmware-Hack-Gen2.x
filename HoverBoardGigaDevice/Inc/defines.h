@@ -15,6 +15,11 @@
 	// hall input pins A,B,C = A0,A1,B11 , etc.
 #endif
 
+#ifdef LAYOUT_2_4
+	#include "defines_2-4.h"		// https://github.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/issues/3
+	// hall input pins A,B,C = A0,A1,B11 , etc.
+#endif
+
 // ADC value conversion defines
 #define MOTOR_AMP_CONV_DC_AMP 0.201465201465  // 3,3V * 1/3 - 0,004Ohm * IL(ampere) = (ADC-Data/4095) *3,3V
 #define ADC_BATTERY_VOLT      0.024169921875 	// V_Batt to V_BattMeasure = factor 30: ( (ADC-Data/4095) *3,3V *30 )

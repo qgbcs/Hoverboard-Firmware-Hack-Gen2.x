@@ -40,7 +40,7 @@
 // LAYOUT_2_X is used in defines.h
 #define LAYOUT_2_0	// https://github.com/flo199213/Hoverboard-Firmware-Hack-Gen2
 //#define LAYOUT_2_1	// https://github.com/krisstakos/Hoverboard-Firmware-Hack-Gen2.1
-
+//#define LAYOUT_2_4	// NOT READY !!! https://github.com/RoboDurden/Hoverboard-Firmware-Hack-Gen2.x/issues/3
 
 #define MASTER		// Select if firmware is for master or slave board
 	// if left uncommented = '//#define MASTER' , then SLAVE is defined at the end of this config.h :-)
@@ -58,7 +58,7 @@
 // ################################################################################
 
 #define PWM_FREQ         		16000     // PWM frequency in Hz
-#define DEAD_TIME        		60        // PWM deadtime (60 = 1µs, measured by oscilloscope)
+#define DEAD_TIME        		60        // PWM deadtime (60 = 1ï¿½s, measured by oscilloscope)
 
 #define DC_CUR_LIMIT     		15        // Motor DC current limit in amps
 
