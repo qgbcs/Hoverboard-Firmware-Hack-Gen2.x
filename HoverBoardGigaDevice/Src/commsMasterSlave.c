@@ -13,7 +13,7 @@
 
 #pragma pack(1)
 
-	typedef struct {			// ´#pragma pack(1)´ needed to get correct sizeof()
+	typedef struct {			// ï¿½#pragma pack(1)ï¿½ needed to get correct sizeof()
 		uint8_t cStart;		//  = '/';
 		uint8_t	wState;
 		float currentDC; 									// global variable for current dc
@@ -21,7 +21,7 @@
 		uint16_t checksum;
 	} SerialSlave2Master;
 
-	typedef struct {			// ´#pragma pack(1)´ needed to get correct sizeof()
+	typedef struct {			// ï¿½#pragma pack(1)ï¿½ needed to get correct sizeof()
 		uint8_t cStart;		//  = '/';
 		int16_t	iPwmSlave;
 		uint8_t iIdentifier;
@@ -148,7 +148,7 @@ void ProessReceived(SerialReceive* pData)
 #else
 
 // Calculate result pwm value -1000 to 1000
-	pwmSlave = CLAMP(pData->iPwmSlave,-300,300);
+	pwmSlave = CLAMP(pData->iPwmSlave,-1000,1000);
 	
 	// Get identifier
 	identifier = pData->iIdentifier;
