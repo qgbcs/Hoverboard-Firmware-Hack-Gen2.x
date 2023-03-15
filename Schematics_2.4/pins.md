@@ -1,3 +1,5 @@
+thanks to Batman313v for this contribution :-)
+
 MCU: https://www.gigadevice.com/product/mcu/arm-cortex-m3/gd32f130c8t6
 
 
