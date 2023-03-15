@@ -30,17 +30,17 @@
 
 
 // LED defines
-#define LED_GREEN GPIO_PIN_15	//TODO
-#define LED_GREEN_PORT GPIOA	//TODO
-#define LED_ORANGE GPIO_PIN_12	//TODO
-#define LED_ORANGE_PORT GPIOA	//TODO
-#define LED_RED GPIO_PIN_3		//TODO
-#define LED_RED_PORT GPIOB		//TODO
+#define LED_GREEN GPIO_PIN_15	// Batman313v, color might be wrong
+#define LED_GREEN_PORT GPIOC	// Batman313v
+#define LED_ORANGE GPIO_PIN_14	// Batman313v, color might be wrong
+#define LED_ORANGE_PORT GPIOC	// Batman313v
+#define LED_RED GPIO_PIN_13		// Batman313v, color might be wrong
+#define LED_RED_PORT GPIOC		// Batman313v
 
-#define UPPER_LED_PIN GPIO_PIN_1	//TODO
-#define UPPER_LED_PORT GPIOA		//TODO
-#define LOWER_LED_PIN GPIO_PIN_0	//TODO
-#define LOWER_LED_PORT GPIOA		//TODO
+#define UPPER_LED_PIN GPIO_PIN_1	// Batman313v, color might be wrong
+#define UPPER_LED_PORT GPIOF		// Batman313v
+#define LOWER_LED_PIN GPIO_PIN_0	// Batman313v, color might be wrong
+#define LOWER_LED_PORT GPIOF		// Batman313v
 
 // Mosfet output
 #define MOSFET_OUT_PIN GPIO_PIN_13	//TODO
@@ -73,26 +73,26 @@
 #define TIMER_BLDC_EMERGENCY_SHUTDOWN_PORT GPIOB		//TODO
 
 // Hall sensor defines
-#define HALL_A_PIN GPIO_PIN_11	//TODO
-#define HALL_A_PORT GPIOB		//TODO
-#define HALL_B_PIN GPIO_PIN_1	//TODO
-#define HALL_B_PORT GPIOF		//TODO
-#define HALL_C_PIN GPIO_PIN_14	//TODO
-#define HALL_C_PORT GPIOC		//TODO
+#define HALL_A_PIN GPIO_PIN_0	// Batman313v
+#define HALL_A_PORT GPIOB		// Batman313v
+#define HALL_B_PIN GPIO_PIN_5	// Batman313v
+#define HALL_B_PORT GPIOB		// Batman313v
+#define HALL_C_PIN GPIO_PIN_4	// Batman313v
+#define HALL_C_PORT GPIOB		// Batman313v
 
 // Usart master slave defines
 #define USART_MASTERSLAVE USART1
 #define USART_MASTERSLAVE_TX_PIN GPIO_PIN_2		//SAME AS 2.0 :-)
 #define USART_MASTERSLAVE_TX_PORT GPIOA			//SAME AS 2.0 :-)
-#define USART_MASTERSLAVE_RX_PIN GPIO_PIN_3		//TODO
-#define USART_MASTERSLAVE_RX_PORT GPIOA			//TODO
+#define USART_MASTERSLAVE_RX_PIN GPIO_PIN_3		//SAME AS 2.0 :-)
+#define USART_MASTERSLAVE_RX_PORT GPIOA			//SAME AS 2.0 :-)
 
 // ADC defines
-#define VBATT_PIN	GPIO_PIN_4			//TODO
-#define VBATT_PORT GPIOA				//TODO
+#define VBATT_PIN	GPIO_PIN_0			// Batman313v, might be CURRENT_DC !!!
+#define VBATT_PORT GPIOA				// Batman313v
 #define VBATT_CHANNEL ADC_CHANNEL_4
-#define CURRENT_DC_PIN	GPIO_PIN_6		//TODO
-#define CURRENT_DC_PORT GPIOA			//TODO
+#define CURRENT_DC_PIN	GPIO_PIN_1		// Batman313v, might be VBATT !!!
+#define CURRENT_DC_PORT GPIOA			// Batman313v
 #define CURRENT_DC_CHANNEL ADC_CHANNEL_6
 
 // Self hold defines
@@ -111,9 +111,9 @@
 #define USART_STEER_COM_RX_PORT GPIOB		//SAME AS 2.0 but left open at missing bluetooth chip 
 
 #ifdef MASTER
-// Buzzer defins
-#define BUZZER_PIN GPIO_PIN_10		//TODO
-#define BUZZER_PORT GPIOB			//TODO
+// Buzzer defines
+#define BUZZER_PIN GPIO_PIN_8		// Batman313v
+#define BUZZER_PORT GPIOB			// Batman313v
 
 // Charge state defines
 #define CHARGE_STATE_PIN GPIO_PIN_0		//TODO
