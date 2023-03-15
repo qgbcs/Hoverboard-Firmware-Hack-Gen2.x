@@ -494,6 +494,11 @@
               <FileType>5</FileType>
               <FilePath>.\Inc\defines_2-1.h</FilePath>
             </File>
+            <File>
+              <FileName>defines_2-4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\defines_2-4.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
