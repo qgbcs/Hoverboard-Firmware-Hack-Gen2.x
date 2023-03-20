@@ -407,7 +407,10 @@ int main (void)
 		
     // Set output
 		SetPWM(pwmMaster);
-		SendSlave(-pwmSlave, enableSlave, RESET, chargeStateLowActive, sendSlaveIdentifier, sendSlaveValue);
+
+		#ifdef USART_MASTERSLAVE
+			SendSlave(-pwmSlave, enableSlave, RESET, chargeStateLowActive, sendSlaveIdentifier, sendSlaveValue);
+		#endif
 		
 		// Increment identifier
 		sendSlaveIdentifier++;
@@ -499,12 +502,15 @@ void ShutOff(void)
 		Delay(10);
 	}
 	buzzerFreq = 0;
+
 	
-	// Send shut off command to slave
-	SendSlave(0, RESET, SET, RESET, RESET, RESET);
+	#ifdef USART_MASTERSLAVE
+		// Send shut off command to slave
+		SendSlave(0, RESET, SET, RESET, RESET, RESET);
 	
 	// Disable usart
-	usart_deinit(USART_MASTERSLAVE);
+		usart_deinit(USART_MASTERSLAVE);
+	#endif
 	
 	// Set pwm and enable to off
 	SetEnable(RESET);

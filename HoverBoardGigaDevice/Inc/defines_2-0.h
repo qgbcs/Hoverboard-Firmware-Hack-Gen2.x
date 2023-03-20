@@ -47,6 +47,7 @@
 #define MOSFET_OUT_PORT GPIOC
 
 // Brushless Control DC (BLDC) defines
+#define TIMER_BLDC_PULLUP	GPIO_PUPD_NONE	// robo
 // Channel G
 #define RCU_TIMER_BLDC RCU_TIMER0
 #define TIMER_BLDC TIMER0
@@ -105,6 +106,7 @@
 
 // Usart steer defines
 #define USART_STEER_COM USART0
+#define USART_STEER_AF	GPIO_AF_0				// robo
 #define USART_STEER_COM_TX_PIN GPIO_PIN_6
 #define USART_STEER_COM_TX_PORT GPIOB
 #define USART_STEER_COM_RX_PIN GPIO_PIN_7

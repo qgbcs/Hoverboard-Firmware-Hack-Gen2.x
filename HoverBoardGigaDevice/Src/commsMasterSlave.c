@@ -1,5 +1,7 @@
 // improved and unified serial communication by Robo Durden :-)
 
+#ifdef USART_MASTERSLAVE
+
 #include "gd32f1x0.h"
 #include "../Inc/it.h"
 #include "../Inc/comms.h"
@@ -369,4 +371,6 @@ FlagStatus GetBeepsBackwardsMaster(void)
 {
 	return beepsBackwardsMaster;
 }
+#endif
+
 #endif

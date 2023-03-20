@@ -158,17 +158,23 @@ void GPIO_init(void)
 	gpio_mode_set(HALL_B_PORT , GPIO_MODE_INPUT, GPIO_PUPD_NONE, HALL_B_PIN);
 	gpio_mode_set(HALL_C_PORT , GPIO_MODE_INPUT, GPIO_PUPD_NONE, HALL_C_PIN);	
 	
-	// Init USART_MASTERSLAVE
-	gpio_mode_set(USART_MASTERSLAVE_TX_PORT , GPIO_MODE_AF, GPIO_PUPD_PULLUP, USART_MASTERSLAVE_TX_PIN);	
-	gpio_mode_set(USART_MASTERSLAVE_RX_PORT , GPIO_MODE_AF, GPIO_PUPD_PULLUP, USART_MASTERSLAVE_RX_PIN);
-	gpio_output_options_set(USART_MASTERSLAVE_TX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_MASTERSLAVE_TX_PIN);
-	gpio_output_options_set(USART_MASTERSLAVE_RX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_MASTERSLAVE_RX_PIN);	
-	gpio_af_set(USART_MASTERSLAVE_TX_PORT, GPIO_AF_1, USART_MASTERSLAVE_TX_PIN);
-	gpio_af_set(USART_MASTERSLAVE_RX_PORT, GPIO_AF_1, USART_MASTERSLAVE_RX_PIN);
+	#ifdef USART_MASTERSLAVE
+		// Init USART_MASTERSLAVE
+		gpio_mode_set(USART_MASTERSLAVE_TX_PORT , GPIO_MODE_AF, GPIO_PUPD_PULLUP, USART_MASTERSLAVE_TX_PIN);	
+		gpio_mode_set(USART_MASTERSLAVE_RX_PORT , GPIO_MODE_AF, GPIO_PUPD_PULLUP, USART_MASTERSLAVE_RX_PIN);
+		gpio_output_options_set(USART_MASTERSLAVE_TX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_MASTERSLAVE_TX_PIN);
+		gpio_output_options_set(USART_MASTERSLAVE_RX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_MASTERSLAVE_RX_PIN);	
+		gpio_af_set(USART_MASTERSLAVE_TX_PORT, GPIO_AF_1, USART_MASTERSLAVE_TX_PIN);
+		gpio_af_set(USART_MASTERSLAVE_RX_PORT, GPIO_AF_1, USART_MASTERSLAVE_RX_PIN);
+	#endif
 	
 	// Init ADC pins
-	gpio_mode_set(VBATT_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, VBATT_PIN);
-	gpio_mode_set(CURRENT_DC_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, CURRENT_DC_PIN);
+	#ifdef VBATT_PIN
+		gpio_mode_set(VBATT_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, VBATT_PIN);
+	#endif
+	#ifdef CURRENT_DC_PIN
+		gpio_mode_set(CURRENT_DC_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, CURRENT_DC_PIN);
+	#endif
 	gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_6);
 	gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);
 		
@@ -177,12 +183,12 @@ void GPIO_init(void)
 	gpio_af_set(TIMER_BLDC_EMERGENCY_SHUTDOWN_PORT, GPIO_AF_2, TIMER_BLDC_EMERGENCY_SHUTDOWN_PIN);
 	
 	// Init PWM output Pins (Configure as alternate functions, push-pull, no pullup)
-  gpio_mode_set(TIMER_BLDC_GH_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_GH_PIN);
-	gpio_mode_set(TIMER_BLDC_BH_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_BH_PIN);
-	gpio_mode_set(TIMER_BLDC_YH_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_YH_PIN);
-	gpio_mode_set(TIMER_BLDC_GL_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_GL_PIN);
-	gpio_mode_set(TIMER_BLDC_BL_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_BL_PIN);
-	gpio_mode_set(TIMER_BLDC_YL_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, TIMER_BLDC_YL_PIN);
+  gpio_mode_set(TIMER_BLDC_GH_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_GH_PIN);
+	gpio_mode_set(TIMER_BLDC_BH_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_BH_PIN);
+	gpio_mode_set(TIMER_BLDC_YH_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_YH_PIN);
+	gpio_mode_set(TIMER_BLDC_GL_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_GL_PIN);
+	gpio_mode_set(TIMER_BLDC_BL_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_BL_PIN);
+	gpio_mode_set(TIMER_BLDC_YL_PORT, GPIO_MODE_AF, TIMER_BLDC_PULLUP, TIMER_BLDC_YL_PIN);
 	
   gpio_output_options_set(TIMER_BLDC_GH_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_2MHZ, TIMER_BLDC_GH_PIN);
   gpio_output_options_set(TIMER_BLDC_BH_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_2MHZ, TIMER_BLDC_BH_PIN);
@@ -207,8 +213,8 @@ void GPIO_init(void)
 	gpio_mode_set(USART_STEER_COM_RX_PORT , GPIO_MODE_AF, GPIO_PUPD_PULLUP, USART_STEER_COM_RX_PIN);
 	gpio_output_options_set(USART_STEER_COM_TX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_STEER_COM_TX_PIN);
 	gpio_output_options_set(USART_STEER_COM_RX_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, USART_STEER_COM_RX_PIN);	
-	gpio_af_set(USART_STEER_COM_TX_PORT, GPIO_AF_0, USART_STEER_COM_TX_PIN);
-	gpio_af_set(USART_STEER_COM_RX_PORT, GPIO_AF_0, USART_STEER_COM_RX_PIN);
+	gpio_af_set(USART_STEER_COM_TX_PORT, USART_STEER_AF, USART_STEER_COM_TX_PIN);
+	gpio_af_set(USART_STEER_COM_RX_PORT, USART_STEER_AF, USART_STEER_COM_RX_PIN);
 	
 #ifdef MASTER	
 	// Init buzzer
@@ -385,55 +391,58 @@ void ADC_init(void)
 //----------------------------------------------------------------------------
 void USART_MasterSlave_init(void)
 {
-	// Enable ADC and DMA clock
-	rcu_periph_clock_enable(RCU_USART1);
-	rcu_periph_clock_enable(RCU_DMA);
-	
-	// Init USART for 115200 baud, 8N1
-	usart_baudrate_set(USART_MASTERSLAVE, 115200);
-	usart_parity_config(USART_MASTERSLAVE, USART_PM_NONE);
-	usart_word_length_set(USART_MASTERSLAVE, USART_WL_8BIT);
-	usart_stop_bit_set(USART_MASTERSLAVE, USART_STB_1BIT);
-	usart_oversample_config(USART_MASTERSLAVE, USART_OVSMOD_16);
-	
-	// Enable both transmitter and receiver
-	usart_transmit_config(USART_MASTERSLAVE, USART_TRANSMIT_ENABLE);
-	usart_receive_config(USART_MASTERSLAVE, USART_RECEIVE_ENABLE);
-	
-	// Enable USART
-	usart_enable(USART_MASTERSLAVE);
-	
-	// Interrupt channel 3/4 enable
-	nvic_irq_enable(DMA_Channel3_4_IRQn, 2, 0);
-	
-	// Initialize DMA channel 4 for USART_SLAVE RX
-	dma_deinit(DMA_CH4);
-	dma_init_struct_usart.direction = DMA_PERIPHERAL_TO_MEMORY;
-	dma_init_struct_usart.memory_addr = (uint32_t)usartMasterSlave_rx_buf;
-	dma_init_struct_usart.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
-	dma_init_struct_usart.memory_width = DMA_MEMORY_WIDTH_8BIT;
-	dma_init_struct_usart.number = USART_MASTERSLAVE_RX_BUFFERSIZE;
-	dma_init_struct_usart.periph_addr = USART_MASTERSLAVE_DATA_RX_ADDRESS;
-	dma_init_struct_usart.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
-	dma_init_struct_usart.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
-	dma_init_struct_usart.priority = DMA_PRIORITY_ULTRA_HIGH;
-	dma_init(DMA_CH4, &dma_init_struct_usart);
-	
-	// Configure DMA mode
-	dma_circulation_enable(DMA_CH4);
-	dma_memory_to_memory_disable(DMA_CH4);
+	#ifdef USART_MASTERSLAVE
+		
+		// Enable ADC and DMA clock
+		rcu_periph_clock_enable(RCU_USART1);
+		rcu_periph_clock_enable(RCU_DMA);
+		
+		// Init USART for 115200 baud, 8N1
+		usart_baudrate_set(USART_MASTERSLAVE, 115200);
+		usart_parity_config(USART_MASTERSLAVE, USART_PM_NONE);
+		usart_word_length_set(USART_MASTERSLAVE, USART_WL_8BIT);
+		usart_stop_bit_set(USART_MASTERSLAVE, USART_STB_1BIT);
+		usart_oversample_config(USART_MASTERSLAVE, USART_OVSMOD_16);
+		
+		// Enable both transmitter and receiver
+		usart_transmit_config(USART_MASTERSLAVE, USART_TRANSMIT_ENABLE);
+		usart_receive_config(USART_MASTERSLAVE, USART_RECEIVE_ENABLE);
+		
+		// Enable USART
+		usart_enable(USART_MASTERSLAVE);
+		
+		// Interrupt channel 3/4 enable
+		nvic_irq_enable(DMA_Channel3_4_IRQn, 2, 0);
+		
+		// Initialize DMA channel 4 for USART_SLAVE RX
+		dma_deinit(DMA_CH4);
+		dma_init_struct_usart.direction = DMA_PERIPHERAL_TO_MEMORY;
+		dma_init_struct_usart.memory_addr = (uint32_t)usartMasterSlave_rx_buf;
+		dma_init_struct_usart.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+		dma_init_struct_usart.memory_width = DMA_MEMORY_WIDTH_8BIT;
+		dma_init_struct_usart.number = USART_MASTERSLAVE_RX_BUFFERSIZE;
+		dma_init_struct_usart.periph_addr = USART_MASTERSLAVE_DATA_RX_ADDRESS;
+		dma_init_struct_usart.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+		dma_init_struct_usart.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
+		dma_init_struct_usart.priority = DMA_PRIORITY_ULTRA_HIGH;
+		dma_init(DMA_CH4, &dma_init_struct_usart);
+		
+		// Configure DMA mode
+		dma_circulation_enable(DMA_CH4);
+		dma_memory_to_memory_disable(DMA_CH4);
 
-	// USART DMA enable for transmission and receive
-	usart_dma_receive_config(USART_MASTERSLAVE, USART_DENR_ENABLE);
-	
-	// Enable DMA transfer complete interrupt
-	dma_interrupt_enable(DMA_CH4, DMA_CHXCTL_FTFIE);
-	
-	// At least clear number of remaining data to be transferred by the DMA 
-	dma_transfer_number_config(DMA_CH4, 1);
-	
-	// Enable dma receive channel
-	dma_channel_enable(DMA_CH4);
+		// USART DMA enable for transmission and receive
+		usart_dma_receive_config(USART_MASTERSLAVE, USART_DENR_ENABLE);
+		
+		// Enable DMA transfer complete interrupt
+		dma_interrupt_enable(DMA_CH4, DMA_CHXCTL_FTFIE);
+		
+		// At least clear number of remaining data to be transferred by the DMA 
+		dma_transfer_number_config(DMA_CH4, 1);
+		
+		// Enable dma receive channel
+		dma_channel_enable(DMA_CH4);
+	#endif
 }
 
 //----------------------------------------------------------------------------

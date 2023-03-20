@@ -175,6 +175,7 @@ void DMA_Channel1_2_IRQHandler(void)
 }
 
 
+#ifdef USART_MASTERSLAVE
 //----------------------------------------------------------------------------
 // This function handles DMA_Channel3_4_IRQHandler interrupt
 // Is asynchronously called when USART_SLAVE RX finished
@@ -190,6 +191,7 @@ void DMA_Channel3_4_IRQHandler(void)
 		dma_interrupt_flag_clear(DMA_CH4, DMA_INT_FLAG_FTF);        
 	}
 }
+#endif
 
 //----------------------------------------------------------------------------
 // Returns number of milliseconds since system start
