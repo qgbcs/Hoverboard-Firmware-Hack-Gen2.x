@@ -28,29 +28,27 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-#define TODO_PORT GPIOA				// this should be a pin that does 
-#define TODO_PIN	GPIO_PIN_4	// no harm if input or output
-
+#define TODO_PORT 	GPIOF		// this should be a pin that does no harm if input or output
+#define TODO_PIN	GPIO_PIN_4	// PF4 is only accessible on the largest GD32F130Rx LQFP64 pinouts mcu
 
 // LED defines
-#define LED_GREEN TODO_PIN				// TODO
-#define LED_GREEN_PORT TODO_PORT	// TODO
-#define LED_ORANGE TODO_PIN				// TODO
-#define LED_ORANGE_PORT TODO_PORT	// TODO
-#define LED_RED TODO_PIN					// TODO
-#define LED_RED_PORT TODO_PORT		// TODO
+#define LED_GREEN TODO_PIN				
+#define LED_GREEN_PORT TODO_PORT	
+#define LED_ORANGE TODO_PIN				
+#define LED_ORANGE_PORT TODO_PORT	
+#define LED_RED TODO_PIN					
+#define LED_RED_PORT TODO_PORT		
 
-#define UPPER_LED_PIN TODO_PIN		// TODO
-#define UPPER_LED_PORT TODO_PORT	// TODO
-#define LOWER_LED_PIN TODO_PIN		// TODO
-#define LOWER_LED_PORT TODO_PORT	// TODO
+#define UPPER_LED_PIN TODO_PIN		
+#define UPPER_LED_PORT TODO_PORT	
+#define LOWER_LED_PIN TODO_PIN		
+#define LOWER_LED_PORT TODO_PORT	
 
 // Mosfet output
 // seems to be an ordinary LED output ?
 // led.c:91	gpio_bit_write(MOSFET_OUT_PORT, MOSFET_OUT_PIN, counter_Blue >= setValue_Blue ? RESET : SET); 
-#define MOSFET_OUT_PIN TODO_PIN		// TODO
-#define MOSFET_OUT_PORT TODO_PORT	// TODO
+#define MOSFET_OUT_PIN TODO_PIN		
+#define MOSFET_OUT_PORT TODO_PORT	
 
 
 // Brushless Control DC (BLDC) defines
@@ -134,11 +132,11 @@
 // This seems to be a digital input that hast to be high in order to enable the motors. 
 // main.c:381: chargeStateLowActive = gpio_input_bit_get(CHARGE_STATE_PORT, CHARGE_STATE_PIN);
 // If not found it should be okay to simply comment this line because chargeStateLowActive in initialised as set = true
-#define CHARGE_STATE_PIN GPIO_PIN_0		// TODO
-#define CHARGE_STATE_PORT GPIOF				// TODO
+#define CHARGE_STATE_PIN GPIO_PIN_0		
+#define CHARGE_STATE_PORT GPIOF				
 #endif
 
 // Debug pin defines - seems to be never used in code.
-#define DEBUG_PIN GPIO_PIN_4	// TODO
-#define DEBUG_PORT GPIOB			// TODO
+#define DEBUG_PIN TODO_PIN
+#define DEBUG_PORT TODO_PORT
 

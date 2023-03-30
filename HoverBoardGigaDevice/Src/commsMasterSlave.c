@@ -1,7 +1,4 @@
 // improved and unified serial communication by Robo Durden :-)
-
-#ifdef USART_MASTERSLAVE
-
 #include "gd32f1x0.h"
 #include "../Inc/it.h"
 #include "../Inc/comms.h"
@@ -12,6 +9,8 @@
 #include "../Inc/bldc.h"
 #include "stdio.h"
 #include "string.h"
+
+#ifdef USART_MASTERSLAVE
 
 #pragma pack(1)
 

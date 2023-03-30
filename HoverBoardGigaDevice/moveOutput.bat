@@ -1,3 +1,3 @@
-copy Objects\Hoverboard.axf ReadyToFlash\hoverboard.elf
-copy Objects\Hoverboard.hex ReadyToFlash\hoverboard.hex
+copy Objects\Hoverboard.axf BinariesToFlash\hoverboard.elf
+copy Objects\Hoverboard.hex BinariesToFlash\hoverboard.hex
 
