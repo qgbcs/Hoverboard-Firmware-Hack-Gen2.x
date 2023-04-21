@@ -74,12 +74,29 @@
 #define TIMER_BLDC_EMERGENCY_SHUTDOWN_PORT GPIOB
 
 // Hall sensor defines CORRECT
-#define HALL_A_PIN GPIO_PIN_0
-#define HALL_A_PORT GPIOA
-#define HALL_C_PIN GPIO_PIN_11
-#define HALL_C_PORT GPIOB
-#define HALL_B_PIN GPIO_PIN_1
-#define HALL_B_PORT GPIOA
+// #define HALL_A_PIN GPIO_PIN_0
+// #define HALL_A_PORT GPIOA
+// #define HALL_C_PIN GPIO_PIN_11
+// #define HALL_C_PORT GPIOB
+// #define HALL_B_PIN GPIO_PIN_1
+// #define HALL_B_PORT GPIOA
+
+// #define HALL_A_PIN GPIO_PIN_1 //G 绿
+// #define HALL_A_PORT GPIOA
+// #define HALL_B_PIN GPIO_PIN_11 //Y 黄
+// #define HALL_B_PORT GPIOB
+// #define HALL_C_PIN GPIO_PIN_14 //B 蓝
+// #define HALL_C_PORT GPIOC
+
+
+// #define HALL_A_PIN GPIO_PIN_11 //G 绿
+// #define HALL_A_PORT GPIOB
+// #define HALL_B_PIN GPIO_PIN_1 //Y 黄
+// #define HALL_B_PORT GPIOA
+// #define HALL_C_PIN GPIO_PIN_14 //B 蓝
+// #define HALL_C_PORT GPIOC
+
+
 
 // Usart master slave defines CORRECT
 #define USART_MASTERSLAVE USART1

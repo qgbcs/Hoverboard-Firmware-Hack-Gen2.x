@@ -27,7 +27,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
+extern int HALL_A_PIN;
+extern int HALL_A_PORT;
+extern int HALL_B_PIN;
+extern int HALL_B_PORT;
+extern int HALL_C_PIN;
+extern int HALL_C_PORT;
 #include "gd32f1x0.h"
 #include "../Inc/setup.h"
 #include "../Inc/config.h"

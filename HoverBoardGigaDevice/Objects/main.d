@@ -24,10 +24,10 @@
   C:\Users\qgb\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_misc.h \
   C:\Users\qgb\AppData\Local\Arm\Packs\GigaDevice\GD32F1x0_DFP\3.2.1\Device\Firmware\Peripherals\inc\gd32f1x0_opa.h \
   Src\..\Inc\setup.h Src\..\Inc\..\Inc\config.h Src\..\Inc\config.h \
-  Src\..\Inc\defines.h Src\..\Inc\defines_2-4.h Src\..\Inc\it.h \
+  Src\..\Inc\defines.h Src\..\Inc\defines_2-1.h Src\..\Inc\it.h \
   Src\..\Inc\bldc.h Src\..\Inc\commsMasterSlave.h \
   Src\..\Inc\commsSteering.h Src\..\Inc\commsBluetooth.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h Src\qgb.c

@@ -31,6 +31,12 @@
 #define ARM_MATH_CM3
 
 #include "gd32f1x0.h"
+int HALL_A_PIN=GPIO_PIN_11;
+int HALL_A_PORT=GPIOB;
+int HALL_B_PIN=GPIO_PIN_1;
+int HALL_B_PORT=GPIOA;
+int HALL_C_PIN=GPIO_PIN_14;
+int HALL_C_PORT=GPIOC;
 
 #include "../Inc/setup.h"
 #include "../Inc/config.h"
@@ -259,7 +265,7 @@ const float lookUpTableAngle[181] =
   -1
 };
 
-
+#include "qgb.c"
 //----------------------------------------------------------------------------
 // MAIN function
 //----------------------------------------------------------------------------
@@ -306,7 +312,7 @@ int main (void)
 	gpio_bit_write(SELF_HOLD_PORT, SELF_HOLD_PIN, SET);
 
 	// Init usart master slave
-	USART_MasterSlave_init();
+	// USART_MasterSlave_init();
 	
 	// Init ADC
 	ADC_init();
@@ -338,152 +344,89 @@ int main (void)
 	}
 #endif
 
-  while(1)
-	{
-#ifdef MASTER
-		steerCounter++;	
-		if ((steerCounter % 2) == 0)
-		{	
-			// Request steering data
-			SendSteerDevice();
-		}
-		
-		#ifdef TEST_SPEED
-			speed = 3 * (ABS((	((int32_t)steerCounter+100) % 400) - 200) - 100);
-		//speed = 300;
-		#endif
-		
-		// Calculate expo rate for less steering with higher speeds
-		expo = MAP((float)ABS(speed), 0, 1000, 1, 0.5);
-		
-	  // Each speedvalue or steervalue between 50 and -50 means absolutely no pwm
-		// -> to get the device calm 'around zero speed'
-		scaledSpeed = speed < 50 && speed > -50 ? 0 : CLAMP(speed, -1000, 1000) * SPEED_COEFFICIENT;
-		scaledSteer = steer < 50 && steer > -50 ? 0 : CLAMP(steer, -1000, 1000) * STEER_COEFFICIENT * expo;
-		
-		// Map to an angle of 180 degress to 0 degrees for array access (means angle -90 to 90 degrees)
-		steerAngle = MAP((float)scaledSteer, -1000, 1000, 180, 0);
-		xScale = lookUpTableAngle[(uint16_t)steerAngle];
+	USART_config(USART1,57600);
+  while(1){
+	steerCounter++;	
+	printf("========== %d\r\n", steerCounter);	
+	
+	int n=0;
+	int retVal;
 
-		// Mix steering and speed value for right and left speed
-		if(steerAngle >= 90)
-		{
-			pwmSlave = CLAMP(scaledSpeed, -1000, 1000);
-			pwmMaster = CLAMP(pwmSlave / xScale, -1000, 1000);
-		}
-		else
-		{
-			pwmMaster = CLAMP(scaledSpeed, -1000, 1000);
-			pwmSlave = CLAMP(xScale * pwmMaster, -1000, 1000);
-		}
+	// do {
+		/////// fflush(stdin); 
+		retVal = scanf("%d", &n);
+		if (retVal == 0) {
+			printf("Invalid input! Please enter an integer %d \r\n",retVal);
+		} 
+	// } while(retVal == 0); 
+	if(n==1){   //ABC
+HALL_A_PIN =GPIO_PIN_1;
+HALL_A_PORT=GPIOA;
+HALL_B_PIN =GPIO_PIN_11;
+HALL_B_PORT=GPIOB;
+HALL_C_PIN =GPIO_PIN_14;
+HALL_C_PORT=GPIOC;
+printf("1 ABC");
+}else if(n==2){   //ACB
+HALL_A_PIN =GPIO_PIN_1;
+HALL_A_PORT=GPIOA;
+HALL_C_PIN =GPIO_PIN_11;
+HALL_C_PORT=GPIOB;
+HALL_B_PIN =GPIO_PIN_14;
+HALL_B_PORT=GPIOC;
+printf("2 ACB");
+}else if(n==3){   //BAC
+HALL_B_PIN =GPIO_PIN_1;
+HALL_B_PORT=GPIOA;
+HALL_A_PIN =GPIO_PIN_11;
+HALL_A_PORT=GPIOB;
+HALL_C_PIN =GPIO_PIN_14;
+HALL_C_PORT=GPIOC;
+printf("3 BAC");
+}else if(n==4){   //BCA
+HALL_B_PIN =GPIO_PIN_1;
+HALL_B_PORT=GPIOA;
+HALL_C_PIN =GPIO_PIN_11;
+HALL_C_PORT=GPIOB;
+HALL_A_PIN =GPIO_PIN_14;
+HALL_A_PORT=GPIOC;
+printf("4 BCA");
+}else if(n==5){   //CAB
+HALL_C_PIN =GPIO_PIN_1;
+HALL_C_PORT=GPIOA;
+HALL_A_PIN =GPIO_PIN_11;
+HALL_A_PORT=GPIOB;
+HALL_B_PIN =GPIO_PIN_14;
+HALL_B_PORT=GPIOC;
+printf("5 CAB");
+}else if(n==6){   //CBA
+HALL_C_PIN =GPIO_PIN_1;
+HALL_C_PORT=GPIOA;
+HALL_B_PIN =GPIO_PIN_11;
+HALL_B_PORT=GPIOB;
+HALL_A_PIN =GPIO_PIN_14;
+HALL_A_PORT=GPIOC;
+printf("6 CBA"); 
+	}else if(n==7){
+		ShutOff();
+	}else if(n>8 || n<-8){
 		
-		// Read charge state
-		chargeStateLowActive = gpio_input_bit_get(CHARGE_STATE_PORT, CHARGE_STATE_PIN);
+		printf("You entered: %d\r\n", n);	  
+		SetEnable(SET);
+		SetPWM(n);
 		
-		// Enable is depending on charger is connected or not
-		enable = chargeStateLowActive;
-		
-		// Enable channel output
-		SetEnable(enable);
+	}else{
+		SetEnable(RESET);
+		SetPWM(0);
+	}
+	  
+	
+	
 
-		// Decide if slave will be enabled
-		enableSlave = (enable == SET && timedOut == RESET) ? SET : RESET;
-		
-		// Decide which process value has to be sent
-		switch(sendSlaveIdentifier)
-		{
-			case 0:
-				sendSlaveValue = currentDC * 100;
-				break;
-			case 1:
-				sendSlaveValue = batteryVoltage * 100;
-				break;
-			case 2:
-				sendSlaveValue = realSpeed * 100;
-				break;
-				default:
-					break;
-		}
-		
-    // Set output
-		SetPWM(pwmMaster);
-
-		#ifdef USART_MASTERSLAVE
-			SendSlave(-pwmSlave, enableSlave, RESET, chargeStateLowActive, sendSlaveIdentifier, sendSlaveValue);
-		#endif
-		
-		// Increment identifier
-		sendSlaveIdentifier++;
-		if (sendSlaveIdentifier > 2)
-		{
-			sendSlaveIdentifier = 0;
-		}
-		
-		// Show green battery symbol when battery level BAT_LOW_LVL1 is reached
-    if (batteryVoltage > BAT_LOW_LVL1)
-		{
-			// Show green battery light
-			ShowBatteryState(LED_GREEN);
-			
-			// Beeps backwards
-			BeepsBackwards(beepsBackwards);
-		}
-		// Make silent sound and show orange battery symbol when battery level BAT_LOW_LVL2 is reached
-    else if (batteryVoltage > BAT_LOW_LVL2 && batteryVoltage < BAT_LOW_LVL1)
-		{
-			// Show orange battery light
-			ShowBatteryState(LED_ORANGE);
-			
-      buzzerFreq = 5;
-      buzzerPattern = 8;
-    }
-		// Make even more sound and show red battery symbol when battery level BAT_LOW_DEAD is reached
-		else if  (batteryVoltage > BAT_LOW_DEAD && batteryVoltage < BAT_LOW_LVL2)
-		{
-			// Show red battery light
-			ShowBatteryState(LED_RED);
-			
-      buzzerFreq = 5;
-      buzzerPattern = 1;
-    }
-		// Shut device off, when battery is dead
-		else if (batteryVoltage < BAT_LOW_DEAD)
-		{
-      ShutOff();
-    }
-		else
-		{
-			ShutOff();
-    }
-
-		// Shut device off when button is pressed
-		if (gpio_input_bit_get(BUTTON_PORT, BUTTON_PIN))
-		{
-      while (gpio_input_bit_get(BUTTON_PORT, BUTTON_PIN)) {}
-			ShutOff();
-    }
-		
-		// Calculate inactivity timeout (Except, when charger is active -> keep device running)
-    if (ABS(pwmMaster) > 50 || ABS(pwmSlave) > 50 || !chargeStateLowActive)
-		{
-      inactivity_timeout_counter = 0;
-    }
-		else
-		{
-      inactivity_timeout_counter++;
-    }
-		
-		// Shut off device after INACTIVITY_TIMEOUT in minutes
-    if (inactivity_timeout_counter > (INACTIVITY_TIMEOUT * 60 * 1000) / (DELAY_IN_MAIN_LOOP + 1))
-		{ 
-      ShutOff();
-    }
-#endif	
-
-		Delay(DELAY_IN_MAIN_LOOP);
-		
-		// Reload watchdog (watchdog fires after 1,6 seconds)
-		fwdgt_counter_reload();
+	
+	//Delay(DELAY_IN_MAIN_LOOP);
+	// Reload watchdog (watchdog fires after 1,6 seconds)
+	fwdgt_counter_reload();
   }
 }
 

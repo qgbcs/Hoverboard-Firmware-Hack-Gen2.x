@@ -24,7 +24,7 @@
 ".\objects\gd32f1x0_wwdgt.o"
 ".\objects\startup_gd32f1x0.o"
 ".\objects\system_gd32f1x0.o"
---library_type=microlib --strict --scatter ".\Objects\Hoverboard.sct"
+--nodebug --strict --scatter ".\Objects\Hoverboard.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\Hoverboard.map" -o .\Objects\Hoverboard.axf
